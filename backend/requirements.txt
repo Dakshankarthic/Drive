@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+spacy
+shapely
+playwright
+google-genai
+python-dotenv
+pydantic

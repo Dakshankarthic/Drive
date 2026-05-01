@@ -9,15 +9,20 @@ if (!config.resolver) {
 }
 
 // ---------------------------------------------------------------------------
-// Resolve platform-specific extensions: .web.tsx > .tsx etc.
+// Platform-specific extensions are handled by Expo's default config.
+// We only need to ensure .web.* extensions are available (at the END,
+// so native files are preferred on Android/iOS).
 // ---------------------------------------------------------------------------
-config.resolver.sourceExts = [
-  'web.tsx',
-  'web.ts',
-  'web.jsx',
-  'web.js',
-  ...(config.resolver.sourceExts || []),
-];
+const defaultExts = config.resolver.sourceExts || [];
+if (!defaultExts.includes('web.tsx')) {
+  config.resolver.sourceExts = [
+    ...defaultExts,
+    'web.tsx',
+    'web.ts',
+    'web.jsx',
+    'web.js',
+  ];
+}
 
 // ---------------------------------------------------------------------------
 // Custom resolver: block native-only MapLibre modules on web.

@@ -1,13 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, useWindowDimensions, Platform } from 'react-native';
-let MapLibreGL: any;
-try {
-  MapLibreGL = require('@maplibre/maplibre-react-native').default;
-} catch (e) {
-  MapLibreGL = null;
-}
+import MapLibreGL from '@maplibre/maplibre-react-native';
 import * as Location from 'expo-location';
-import * as SQLite from 'expo-sqlite';
 import { Ionicons } from '@expo/vector-icons';
 import { Hamburger } from '../../components/Hamburger';
 
@@ -30,7 +24,6 @@ export default function ZonesScreen() {
   const [location, setLocation] = useState<Location.LocationObject | null>(null);
   const [zones, setZones] = useState<Zone[]>([]);
   const [selectedZone, setSelectedZone] = useState<Zone | null>(null);
-  const db = Platform.OS !== 'web' ? SQLite.openDatabase('drivelegal.db') : null;
 
   useEffect(() => {
     (async () => {
@@ -38,31 +31,8 @@ export default function ZonesScreen() {
       if (status !== 'granted') return;
       let loc = await Location.getCurrentPositionAsync({});
       setLocation(loc);
-      fetchZones();
     })();
   }, []);
-
-  const fetchZones = () => {
-    if (!db) return;
-    db.transaction(tx => {
-      tx.executeSql(
-        'SELECT * FROM zones',
-        [],
-        (_, { rows }) => {
-          const results: Zone[] = [];
-          for (let i = 0; i < rows.length; i++) {
-            const item = rows.item(i);
-            results.push({
-              ...item,
-              id: item.zone_id,
-              coordinates: JSON.parse(item.geometry_json)
-            });
-          }
-          setZones(results);
-        }
-      );
-    });
-  };
 
   const getZoneColor = (type: string) => {
     switch (type) {
@@ -84,51 +54,42 @@ export default function ZonesScreen() {
 
   return (
     <View style={styles.container}>
-      {MapLibreGL ? (
-        <MapLibreGL.MapView
-          style={styles.map}
-          // @ts-ignore
-          styleURL={`file://mobile/assets/tiles/india.mbtiles`}
-        >
-          <MapLibreGL.Camera
-            zoomLevel={14}
-            centerCoordinate={location ? [location.coords.longitude, location.coords.latitude] : [77.2090, 28.6139]}
-          />
+      <MapLibreGL.MapView
+        style={styles.map}
+        styleURL="https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json"
+      >
+        <MapLibreGL.Camera
+          zoomLevel={11}
+          centerCoordinate={location ? [location.coords.longitude, location.coords.latitude] : [77.2090, 28.6139]}
+        />
 
-          {location && (
-            <MapLibreGL.PointAnnotation
-              id="userLocation"
-              coordinate={[location.coords.longitude, location.coords.latitude]}
-            >
-              <View style={styles.userDot} />
-            </MapLibreGL.PointAnnotation>
-          )}
+        {location && (
+          <MapLibreGL.PointAnnotation
+            id="userLocation"
+            coordinate={[location.coords.longitude, location.coords.latitude]}
+          >
+            <View style={styles.userDot} />
+          </MapLibreGL.PointAnnotation>
+        )}
 
-          {zones.map(zone => (
-            <MapLibreGL.ShapeSource
-              key={zone.id}
-              id={`source-${zone.id}`}
-              onPress={onZonePress}
-              shape={zone.coordinates}
-            >
-              <MapLibreGL.FillLayer
-                id={`layer-${zone.id}`}
-                style={{
-                  fillColor: getZoneColor(zone.type),
-                  fillOpacity: 0.4,
-                  fillOutlineColor: getZoneColor(zone.type),
-                }}
-              />
-            </MapLibreGL.ShapeSource>
-          ))}
-        </MapLibreGL.MapView>
-      ) : (
-        <View style={styles.fallbackContainer}>
-          <Ionicons name="map-outline" size={64} color="#10b981" />
-          <Text style={styles.fallbackText}>Interactive Map Unavailable</Text>
-          <Text style={styles.fallbackSubtext}>MapLibre requires a development build. Open this screen in a web browser for the fallback view.</Text>
-        </View>
-      )}
+        {zones.map(zone => (
+          <MapLibreGL.ShapeSource
+            key={zone.id}
+            id={`source-${zone.id}`}
+            onPress={onZonePress}
+            shape={zone.coordinates}
+          >
+            <MapLibreGL.FillLayer
+              id={`layer-${zone.id}`}
+              style={{
+                fillColor: getZoneColor(zone.type),
+                fillOpacity: 0.4,
+                fillOutlineColor: getZoneColor(zone.type),
+              }}
+            />
+          </MapLibreGL.ShapeSource>
+        ))}
+      </MapLibreGL.MapView>
 
       {selectedZone && (
         <View style={[

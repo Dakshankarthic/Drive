@@ -92,7 +92,7 @@ class AgentEngine:
             self.client = genai.Client(api_key=api_key)
             self.types = types
             self.gemini_available = True
-            logger.info("[Agent] Gemini 2.5 Flash ready with tool calling.")
+            logger.info("[Agent] Gemini 2.0 Flash ready with tool calling.")
         except Exception as e:
             logger.error(f"[Agent] Failed to initialize Gemini: {e}")
 
@@ -157,7 +157,7 @@ class AgentEngine:
             # Agentic loop
             for iteration in range(self.MAX_TOOL_ITERATIONS):
                 response = self.client.models.generate_content(
-                    model="gemini-2.5-flash",
+                    model="gemini-2.0-flash",
                     contents=contents,
                     config=config,
                 )
@@ -220,13 +220,23 @@ class AgentEngine:
                 "response": final_text,
                 "tools_used": tools_used,
                 "agent_powered": True,
-                "model": "gemini-2.5-flash",
+                "model": "gemini-2.0-flash",
             }
 
         except Exception as e:
-            logger.error(f"[Agent] Gemini error: {e}")
+            error_msg = str(e)
+            logger.error(f"[Agent] Gemini error: {error_msg}")
+            
+            if "429" in error_msg or "RESOURCE_EXHAUSTED" in error_msg:
+                return {
+                    "status": "rate_limit",
+                    "response": "⚠️ AI Rate Limit Reached! You have asked too many questions too quickly. Please wait 30 seconds and try again.",
+                    "tools_used": [],
+                    "agent_powered": False,
+                }
+                
             fallback = self._keyword_fallback(user_text, gps)
-            fallback["error_detail"] = str(e)
+            fallback["error_detail"] = error_msg
             return fallback
 
     def _build_tool_declarations(self) -> list:

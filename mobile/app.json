@@ -18,10 +18,16 @@
       "supportsTablet": true
     },
     "android": {
-      "package": "com.drivelegal.app",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#1c1c1c"
+        "backgroundColor": "#ffffff"
+      },
+      "usesCleartextTraffic": true,
+      "package": "com.sripathirajan.drivelegalmobile",
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyDTfY-7KE8S7fhS2CaxXK0-QZFRWuWCZnc"
+        }
       }
     },
     "web": {
@@ -31,16 +37,13 @@
     "plugins": [
       "expo-router",
       "expo-font",
-      "expo-sqlite"
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow DriveLegal to use your location for traffic rules and zone detection."
+        }
+      ]
     ],
-    "scheme": "drivelegal",
-    "extra": {
-      "router": {
-        "origin": false
-      },
-      "eas": {
-        "projectId": "985ec079-a085-44a6-a262-b61c7d293f9b"
-      }
-    }
+    "scheme": "drivelegal"
   }
 }

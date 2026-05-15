@@ -7,9 +7,13 @@
       "section": "Section 183",
       "act": "Motor Vehicles Act 1988",
       "title": "Driving at excessive speed",
-      "description": "Whoever drives a motor vehicle in contravention of the speed limits shall be punishable with fine.",
-      "applies_to": ["ALL"],
-      "vehicle_classes": ["ALL"],
+      "description": "Whoever drives a motor vehicle in contravention of the speed limits (over speeding) shall be punishable with fine.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
       "state_overrides": [
         {
           "state": "DL",
@@ -17,7 +21,9 @@
           "effective_date": "2024-01-01"
         }
       ],
-      "related_offence_codes": ["SPEED_EXCESS"],
+      "related_offence_codes": [
+        "SPEED_EXCESS"
+      ],
       "penalty_ref": "MV_183_FINE"
     },
     {
@@ -25,11 +31,17 @@
       "section": "Section 185",
       "act": "Motor Vehicles Act 1988",
       "title": "Drunken driving",
-      "description": "Whoever, while driving, or attempting to drive, a motor vehicle, has in his blood, alcohol exceeding 30 mg. per 100 ml. of blood.",
-      "applies_to": ["ALL"],
-      "vehicle_classes": ["ALL"],
+      "description": "Whoever, while driving, or attempting to drive, a motor vehicle, has in his blood, alcohol exceeding 30 mg. per 100 ml. of blood. This is the law for Drunk Driving.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
       "state_overrides": [],
-      "related_offence_codes": ["DRUNK_DRIVING"],
+      "related_offence_codes": [
+        "DRUNK_DRIVING"
+      ],
       "penalty_ref": "MV_185_FINE"
     },
     {
@@ -37,11 +49,17 @@
       "section": "Section 181",
       "act": "Motor Vehicles Act 1988",
       "title": "Driving without a valid license",
-      "description": "Whoever drives a motor vehicle in contravention of section 3 or section 4.",
-      "applies_to": ["ALL"],
-      "vehicle_classes": ["ALL"],
+      "description": "Whoever drives a motor vehicle in contravention of section 3 or section 4 (Driving without a valid driving license).",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
       "state_overrides": [],
-      "related_offence_codes": ["NO_LICENSE"],
+      "related_offence_codes": [
+        "NO_LICENSE"
+      ],
       "penalty_ref": "MV_181_FINE"
     },
     {
@@ -50,10 +68,17 @@
       "act": "Motor Vehicles Act 1988",
       "title": "Dangerous driving",
       "description": "Whoever drives a motor vehicle at a speed or in a manner which is dangerous to the public, having regard to all the circumstances of the case, including the nature, condition and use of the place where the vehicle is driven and the amount of traffic which actually is at the time or which might reasonably be expected to be in the place, shall be punishable.",
-      "applies_to": ["ALL"],
-      "vehicle_classes": ["ALL"],
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
       "state_overrides": [],
-      "related_offence_codes": ["DANGEROUS_DRIVING", "RED_LIGHT_JUMPING"],
+      "related_offence_codes": [
+        "DANGEROUS_DRIVING",
+        "RED_LIGHT_JUMPING"
+      ],
       "penalty_ref": "MV_184_FINE"
     },
     {
@@ -61,11 +86,17 @@
       "section": "Section 194D",
       "act": "Motor Vehicles Act 1988",
       "title": "Not wearing protective headgear",
-      "description": "Whoever drives or causes or allows to be driven a motor cycle or pillion rider in contravention of the provisions of section 129.",
-      "applies_to": ["TWO_WHEELER"],
-      "vehicle_classes": ["TWO_WHEELER"],
+      "description": "Whoever drives or causes or allows to be driven a motor cycle or pillion rider without a helmet (protective headgear) in contravention of the provisions of section 129.",
+      "applies_to": [
+        "TWO_WHEELER"
+      ],
+      "vehicle_classes": [
+        "TWO_WHEELER"
+      ],
       "state_overrides": [],
-      "related_offence_codes": ["NO_HELMET"],
+      "related_offence_codes": [
+        "NO_HELMET"
+      ],
       "penalty_ref": "MV_194D_FINE"
     },
     {
@@ -74,11 +105,5318 @@
       "act": "Motor Vehicles Act 1988",
       "title": "Failure to allow passage to emergency vehicles",
       "description": "Failure to allow passage to emergency vehicles like ambulance, fire engine, etc.",
-      "applies_to": ["ALL"],
-      "vehicle_classes": ["ALL"],
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
       "state_overrides": [],
-      "related_offence_codes": ["EMERGENCY_VEHICLE_OBSTRUCTION"],
+      "related_offence_codes": [
+        "EMERGENCY_VEHICLE_OBSTRUCTION"
+      ],
       "penalty_ref": "MV_194E_FINE"
+    },
+    {
+      "rule_id": "MV_184C",
+      "section": "Section 184(c)",
+      "act": "Motor Vehicles Act 1988",
+      "title": "Using handheld communication devices while driving",
+      "description": "Use of handheld communication devices (mobile phone / cell phone) while driving a motor vehicle is prohibited and punishable.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [
+        "MOBILE_PHONE"
+      ],
+      "penalty_ref": "MV_184_FINE"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_0",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat is the speed limit in residential areas in India?",
+      "description": "###Assistant:\nThe speed limit in residential areas in India is usually 20-40 km/h, but it can vary by location.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_1",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhen should you use hazard lights on your vehicle?",
+      "description": "###Assistant:\nHazard lights should only be used in the case of a vehicle breakdown or to indicate a temporary obstruction on the road.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_2",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat is the penalty for not wearing a helmet while riding a two-wheeler?",
+      "description": "###Assistant:\nThe penalty for not wearing a helmet while riding a two-wheeler in India can vary by state, but it often includes fines and points on your driving license.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_3",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat is the legal blood alcohol limit for driving in India?",
+      "description": "###Assistant:\nThe legal blood alcohol limit for driving in India is typically 0.03%, but it can vary by state and vehicle type.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_4",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat does a solid yellow line on the road indicate?",
+      "description": "###Assistant:\nA solid yellow line on the road indicates that overtaking is prohibited.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_5",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat should you do when you approach a pedestrian crossing?",
+      "description": "###Assistant:\nWhen approaching a pedestrian crossing, you should slow down and stop to allow pedestrians to cross safely.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_6",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat is the fine for using a mobile phone while driving?",
+      "description": "###Assistant:\nThe fine for using a mobile phone while driving in India can vary by state, but it often includes fines and points on your driving license.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_7",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat is the penalty for not carrying vehicle insurance in India?",
+      "description": "###Assistant:\nThe penalty for not carrying vehicle insurance in India can result in fines and suspension of your vehicle's registration.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_8",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat is the maximum permissible blood alcohol limit for a driver below 18 years of age?",
+      "description": "###Assistant:\nThe maximum permissible blood alcohol limit for a driver below 18 years of age in India is typically zero; no alcohol is allowed.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_9",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat does a red traffic light indicate?",
+      "description": "###Assistant:\nA red traffic light indicates that you must stop your vehicle.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_10",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat should you do when an ambulance with its siren on approaches?",
+      "description": "###Assistant:\nWhen an ambulance with its siren on approaches, you should pull over to the side of the road and allow it to pass.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_11",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat are the rules for using high beams at night?",
+      "description": "###Assistant:\nHigh beams should be used judiciously and dimmed when approaching another vehicle or when driving in well-lit areas.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_12",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat is the speed limit on national highways in India?",
+      "description": "###Assistant:\nThe speed limit on national highways in India varies but is often in the range of 80-100 km/h for cars.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_13",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat is the fine for not wearing a seatbelt while driving?",
+      "description": "###Assistant:\nThe fine for not wearing a seatbelt while driving in India can vary but often includes fines.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_14",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat is the legal age for driving a car in India?",
+      "description": "###Assistant:\nThe legal age for driving a car in India is typically 18 years.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_15",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat is the penalty for not stopping at a railway crossing when the barrier is down?",
+      "description": "###Assistant:\nThe penalty for not stopping at a railway crossing when the barrier is down can include fines and legal action.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_16",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat is the purpose of a zebra crossing?",
+      "description": "###Assistant:\nA zebra crossing is meant for pedestrians to cross the road safely, and vehicles should stop and yield to pedestrians.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_17",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat does a green traffic light indicate?",
+      "description": "###Assistant:\nA green traffic light indicates that you can proceed if the way is clear.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_18",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat should you do if you witness a hit-and-run accident?",
+      "description": "###Assistant:\nIf you witness a hit-and-run accident, you should note down the vehicle's details and inform the authorities.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_19",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat is the penalty for overspeeding in a school zone?",
+      "description": "###Assistant:\nThe penalty for overspeeding in a school zone in India can vary but often includes fines and points on your driving license.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_20",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat are the rules for parking in a no-parking zone?",
+      "description": "###Assistant:\nParking in a no-parking zone can result in fines and towing of the vehicle.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_21",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat is the penalty for driving without a valid license?",
+      "description": "###Assistant:\nDriving without a valid license in India can result in fines and legal action.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_22",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat is the maximum speed limit for a commercial vehicle in India?",
+      "description": "###Assistant:\nThe maximum speed limit for a commercial vehicle in India varies but is often in the range of 40-60 km/h.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_23",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat should you do when a traffic police officer signals you to stop?",
+      "description": "###Assistant:\nWhen a traffic police officer signals you to stop, you must pull over and follow their instructions.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_24",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat is the fine for not displaying a valid pollution under control (PUC) certificate?",
+      "description": "###Assistant:\nThe fine for not displaying a valid pollution under control (PUC) certificate can vary but often includes fines.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_25",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat is the penalty for driving on the wrong side of the road?",
+      "description": "###Assistant:\nDriving on the wrong side of the road in India can result in fines and legal action.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_26",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat does a white arrow on the road indicate?",
+      "description": "###Assistant:\nA white arrow on the road indicates the direction of traffic flow.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_27",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat is the fine for not giving way to an ambulance with its siren on?",
+      "description": "###Assistant:\nNot giving way to an ambulance with its siren on can result in fines and legal action.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_28",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat is the speed limit for a school bus in India?",
+      "description": "###Assistant:\nThe speed limit for a school bus in India can vary but is often around 40-50 km/h.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_29",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat is the penalty for jumping a red traffic light?",
+      "description": "###Assistant:\nJumping a red traffic light in India can result in fines and points on your driving license.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_30",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat is the legal speed limit for cars on urban roads in India?",
+      "description": "###Assistant:\nThe legal speed limit for cars on urban roads in India is typically 50 km/h, but it may vary in some areas.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_31",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat is the penalty for driving without a valid license?",
+      "description": "###Assistant:\nDriving without a valid license can lead to a fine of up to Rs. 5,000 and/or imprisonment for up to 3 months.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_32",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat does the Motor Vehicles Act, 1988 govern?",
+      "description": "###Assistant:\nThe Motor Vehicles Act, 1988 governs the registration, licensing, and regulation of motor vehicles in India.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_34",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat is the fine for not wearing a helmet while riding a two-wheeler?",
+      "description": "###Assistant:\nThe fine for not wearing a helmet while riding a two-wheeler can vary but is typically around Rs. 1,000.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_35",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat is the legal blood alcohol concentration (BAC) limit for drivers in India?",
+      "description": "###Assistant:\nThe legal blood alcohol concentration (BAC) limit for drivers in India is 0.03% or 30 mg of alcohol per 100 ml of blood.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_36",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat is the penalty for not stopping at a red traffic signal?",
+      "description": "###Assistant:\nNot stopping at a red traffic signal can lead to a fine of Rs. 1,000 or more depending on the severity of the violation.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_38",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat is the maximum speed limit on expressways in India?",
+      "description": "###Assistant:\nThe maximum speed limit on expressways in India is usually 100-120 km/h, but it can vary in different states.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_39",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat are the rules regarding using mobile phones while driving?",
+      "description": "###Assistant:\nUsing mobile phones while driving is prohibited, and violators can face fines and penalties.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_41",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat is the penalty for overloading a commercial vehicle?",
+      "description": "###Assistant:\nThe penalty for overloading a commercial vehicle varies based on the extent of overloading and can lead to fines.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_42",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat is the procedure for obtaining a learner's license in India?",
+      "description": "###Assistant:\nObtaining a learner's license involves written and practical tests on traffic rules and road signs.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_44",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat is the fine for parking in a no-parking zone?",
+      "description": "###Assistant:\nThe fine for parking in a no-parking zone can vary but is typically around Rs. 200 to Rs. 500.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_45",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat are the rules for using seat belts while driving?",
+      "description": "###Assistant:\nSeat belts must be worn by all occupants of a vehicle, and not wearing them can lead to fines.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_47",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat is the penalty for not carrying vehicle insurance?",
+      "description": "###Assistant:\nDriving without vehicle insurance can result in fines and penalties, and the vehicle may be impounded.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_48",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat is the legal age for obtaining a driving license in India?",
+      "description": "###Assistant:\nThe legal age for obtaining a driving license in India is typically 18 years for cars and 16 years for two-wheelers.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_49",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat are the rules for using high beam headlights?",
+      "description": "###Assistant:\nHigh beam headlights should be used only on unlit roads and should be dimmed when approaching other vehicles.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_51",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat is the penalty for reckless driving?",
+      "description": "###Assistant:\nReckless driving can lead to fines and imprisonment, and the severity of penalties depends on the situation.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_52",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat is the procedure for renewing a driving license?",
+      "description": "###Assistant:\nRenewing a driving license typically involves submitting the required documents and paying the renewal fee.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_54",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat is the penalty for not giving way to an ambulance?",
+      "description": "###Assistant:\nNot giving way to an ambulance can lead to fines and penalties as it's a serious violation.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_55",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat are the rules for overtaking other vehicles?",
+      "description": "###Assistant:\nOvertaking should be done from the right side, and safety rules must be followed while overtaking.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_57",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat is the penalty for driving without a pollution certificate?",
+      "description": "###Assistant:\nDriving without a pollution certificate can result in fines and the vehicle may be impounded.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_58",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat is the procedure for transferring vehicle ownership?",
+      "description": "###Assistant:\nTransferring vehicle ownership involves submitting the required documents and paying the transfer fee.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_60",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat is the penalty for driving without a valid registration certificate?",
+      "description": "###Assistant:\nDriving without a valid registration certificate can lead to fines and penalties.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_61",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat is the legal age for riding a two-wheeler in India?",
+      "description": "###Assistant:\nThe legal age for riding a two-wheeler in India is typically 16 years and above.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_63",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat is the penalty for not using indicators while changing lanes?",
+      "description": "###Assistant:\nNot using indicators while changing lanes can lead to fines as it's important for road safety.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_64",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat are the rules for using hand signals while driving?",
+      "description": "###Assistant:\nHand signals should be used when indicators are not functional, and they are essential for safe driving.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_66",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat is the penalty for unauthorized use of sirens or horns?",
+      "description": "###Assistant:\nUnauthorized use of sirens or horns can lead to fines and penalties.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_67",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat is the fine for not stopping for a school bus with its stop sign extended but no flas",
+      "description": "###Assistant:\nThe fine for not stopping for a school bus with its stop sign extended but no flashing lights can vary but often includes fines and legal action.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_68",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhen should you use hazard lights in heavy rain or fog?",
+      "description": "###Assistant:\nYou should use hazard lights in heavy rain or fog to increase visibility and warn other drivers of your presence.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_69",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat is the legal age for riding a motorcycle in India?",
+      "description": "###Assistant:\nThe legal age for riding a motorcycle in India is typically 18 years.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_70",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat is the penalty for not giving way to an ambulance with its siren on?",
+      "description": "###Assistant:\nThe penalty for not giving way to an ambulance with its siren on can vary but often includes fines and legal action.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_71",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat should you do when you see a 'no entry' sign?",
+      "description": "###Assistant:\nWhen you see a 'no entry' sign, you should not enter the restricted area or road.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_72",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat is the speed limit for electric scooters in India?",
+      "description": "###Assistant:\nThe speed limit for electric scooters in India varies but is often around 25-30 km/h.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_73",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat is the fine for not carrying a valid driver's license while driving?",
+      "description": "###Assistant:\nThe fine for not carrying a valid driver's license while driving can vary but often includes fines.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_74",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat does a rectangular traffic sign with a green border indicate?",
+      "description": "###Assistant:\nA rectangular traffic sign with a green border often indicates information or guidance.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_75",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat is the maximum speed limit for a private bus on national highways in India?",
+      "description": "###Assistant:\nThe maximum speed limit for a private bus on national highways in India varies but is often around 80-100 km/h.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_76",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat is the fine for not having a working horn on your vehicle?",
+      "description": "###Assistant:\nThe fine for not having a working horn on your vehicle can vary but often includes fines.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_77",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat should you do when you see an approaching emergency vehicle with flashing lights and ",
+      "description": "###Assistant:\nWhen you see an approaching emergency vehicle with flashing lights and sirens, you should pull over to the side of the road and allow it to pass.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_78",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat is the speed limit for electric rickshaws in India?",
+      "description": "###Assistant:\nThe speed limit for electric rickshaws in India varies but is often around 25-30 km/h.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_79",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat is the penalty for not using your vehicle's turn signals while changing lanes?",
+      "description": "###Assistant:\nThe penalty for not using your vehicle's turn signals while changing lanes can vary but often includes fines.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_80",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat is the legal age for obtaining a transport vehicle driving license in India?",
+      "description": "###Assistant:\nThe legal age for obtaining a transport vehicle driving license in India is typically 18 years.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_81",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat does a rectangular traffic sign with a blue border indicate?",
+      "description": "###Assistant:\nA rectangular traffic sign with a blue border often indicates information related to services or facilities.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_82",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat should you do if your vehicle catches fire on the road?",
+      "description": "###Assistant:\nIf your vehicle catches fire on the road, you should safely exit the vehicle and move to a safe distance.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_83",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat is the speed limit for buses within city limits in India?",
+      "description": "###Assistant:\nThe speed limit for buses within city limits in India varies but is often around 40-50 km/h.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_84",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat is the fine for not stopping at a toll booth when required?",
+      "description": "###Assistant:\nThe fine for not stopping at a toll booth when required can vary but often includes fines.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_85",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat is the penalty for driving without a valid insurance certificate?",
+      "description": "###Assistant:\nThe penalty for driving without a valid insurance certificate can vary but often includes fines and legal action.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_86",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat does a circular traffic sign with a green border indicate?",
+      "description": "###Assistant:\nA circular traffic sign with a green border often indicates a regulatory instruction.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_87",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat is the speed limit for e-rickshaws in India?",
+      "description": "###Assistant:\nThe speed limit for e-rickshaws in India varies but is often around 25-30 km/h.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_88",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat is the maximum permissible noise level for a vehicle's horn near hospitals and school",
+      "description": "###Assistant:\nThe maximum permissible noise level for a vehicle's horn near hospitals and schools in India is typically 55 decibels.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_89",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat should you do when you encounter a fallen tree blocking the road?",
+      "description": "###Assistant:\nWhen you encounter a fallen tree blocking the road, you should not attempt to move it yourself and instead contact the authorities.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_90",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat is the speed limit for taxis within city limits in India?",
+      "description": "###Assistant:\nThe speed limit for taxis within city limits in India varies but is often around 40-50 km/h.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_91",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat is the fine for not having a functioning brake light on your vehicle?",
+      "description": "###Assistant:\nThe fine for not having a functioning brake light on your vehicle can vary but often includes fines.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_92",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat is the penalty for obstructing the movement of an emergency vehicle?",
+      "description": "###Assistant:\nThe penalty for obstructing the movement of an emergency vehicle can vary but often includes fines and legal action.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_93",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat does a rectangular traffic sign with a red diagonal line indicate?",
+      "description": "###Assistant:\nA rectangular traffic sign with a red diagonal line often indicates a prohibition or restriction.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_94",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat is the speed limit for a motor vehicle towing a trailer on expressways?",
+      "description": "###Assistant:\nThe speed limit for a motor vehicle towing a trailer on expressways in India varies but is often around 60-80 km/h.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_95",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat is the maximum permissible noise level for a vehicle horn in residential areas in Ind",
+      "description": "###Assistant:\nThe maximum permissible noise level for a vehicle horn in residential areas in India is typically 55 decibels.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_96",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat should you do when you approach a blind pedestrian with a white cane at a crosswalk?",
+      "description": "###Assistant:\nWhen you approach a blind pedestrian with a white cane at a crosswalk, you should stop and assist them in crossing safely.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_97",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat is the speed limit for auto-rickshaws on city roads in India?",
+      "description": "###Assistant:\nThe speed limit for auto-rickshaws on city roads in India varies but is often around 40-50 km/h.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_98",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat is the penalty for not stopping for a pedestrian at a crosswalk?",
+      "description": "###Assistant:\nThe penalty for not stopping for a pedestrian at a crosswalk can vary but often includes fines.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Indian_traffic_law_QA_99",
+      "section": "QA Dataset",
+      "act": "Pravincoder/Indian_traffic_law_QA",
+      "title": "###Human:\nWhat is the fine for not carrying a valid pollution under control (PUC) certificate for a ",
+      "description": "###Assistant:\nThe fine for not carrying a valid pollution under control (PUC) certificate for a private vehicle can vary but often includes fines.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_0",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "In New Hampshire, what is considered legal evidence of intoxication for a driver under 21 years old?",
+      "description": "1",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_1",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "What is the maximum speed limit in a rural residence district in New Hampshire unless otherwise post",
+      "description": "2",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_2",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "In New Hampshire, a driver must signal their intention to turn at least how many feet before the tur",
+      "description": "1",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_3",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "When approaching a school bus displaying flashing red lights on an undivided roadway, you must stop ",
+      "description": "3",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_4",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "At what Blood Alcohol Concentration (BAC) level is a driver 21 years or older considered legally int",
+      "description": "1",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_5",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "When following another vehicle in ideal conditions, what is the minimum safe following distance acco",
+      "description": "2",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_6",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "When a vehicle's brakes develop sudden failure, what is the correct action to take?",
+      "description": "1",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_8",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "Which of the following is NOT true about passing on the right?",
+      "description": "2",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_9",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "What does a pennant-shaped traffic sign indicate?",
+      "description": "1",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_10",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "When under 18 years old, the holder of a Youth Operator License in New Hampshire must not operate a ",
+      "description": "1",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_12",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "When must you dim your headlights when following another vehicle in New Hampshire?",
+      "description": "3",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_13",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "At what minimum age can you obtain a motorcycle license in New Hampshire without completing a rider ",
+      "description": "2",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_14",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "Which of the following is NOT an acceptable identification document when applying for a New Hampshir",
+      "description": "2",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_17",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "What is the penalty for the first offense of transporting alcoholic beverages by a minor in New Hamp",
+      "description": "3",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_19",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "If you refuse to take a test to determine alcohol or drug content in your blood under the Implied Co",
+      "description": "3",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_20",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "When parking your vehicle downhill with or without a curb, which way should you turn your front whee",
+      "description": "1",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_21",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "What does a yellow diamond-shaped sign with a black cross in the center signify?",
+      "description": "1",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_22",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "When stopping behind another vehicle on a hill, you should stay back far enough to:",
+      "description": "3",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_23",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "If convicted of driving while under the influence of drugs or alcohol in New Hampshire, how many dem",
+      "description": "2",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_24",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "When must you use your headlights according to New Hampshire law?",
+      "description": "1",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_25",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "What should you do if your vehicle begins to hydroplane?",
+      "description": "2",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_26",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "Under ideal driving conditions in New Hampshire, the minimum speed limit on the interstate is:",
+      "description": "1",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_28",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "In New Hampshire, when are you required to stop for a school bus?",
+      "description": "1",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_29",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "When approaching a vehicle from behind at night, within how many feet must you dim your high-beam he",
+      "description": "1",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_30",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "A solid yellow line on your side of the center line means:",
+      "description": "2",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_31",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "When must you report an accident to the Department of Motor Vehicles in Concord?",
+      "description": "2",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_33",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "A driver with an out-of-state license applying for a New Hampshire license must surrender their out-",
+      "description": "1",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_34",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "Which of the following statements about seat belts is FALSE?",
+      "description": "2",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_35",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "When parking alongside a curb on a level street, the front and back wheels must be parallel and with",
+      "description": "1",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_36",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "While driving at night, you should dim your headlights to low beam:",
+      "description": "1",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_38",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "A red and white triangular sign at an intersection means:",
+      "description": "3",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_39",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "When must you report a crash to the Department of Motor Vehicles if the property damage is over a ce",
+      "description": "1",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_40",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "What is the minimum age at which a learner license (instruction permit) can be issued in Texas, prov",
+      "description": "1",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_42",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "What is the maximum allowable distance your vehicle may be parked from the curb when parallel parked",
+      "description": "2",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_43",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "Under Texas law, when must you dim your headlights when approaching an oncoming vehicle?",
+      "description": "3",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_44",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "When driving on a one-way street with three lanes, which lane should you use if you intend to turn l",
+      "description": "2",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_45",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "In Texas, what is the maximum speed limit on highways numbered by Texas or the U.S. outside an urban",
+      "description": "2",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_46",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "According to Texas law, which of the following statements about using a cell phone while driving is ",
+      "description": "1",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_47",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "Which of the following is TRUE regarding the use of turn signals in Texas?",
+      "description": "1",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_48",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "If you approach a school bus from either direction, and the bus is displaying alternately flashing r",
+      "description": "1",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_49",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "When are you required to show proof of financial responsibility in Texas?",
+      "description": "2",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_50",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "What is the minimal acceptable tire tread depth for vehicles in Texas?",
+      "description": "2",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_51",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "Which of the following statements is FALSE regarding motorcycles in Texas?",
+      "description": "3",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_52",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "If you are involved in an accident in Texas that is not investigated by a law enforcement officer, a",
+      "description": "1",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_53",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "Under the Texas Graduated Driver License (GDL) program, during Phase Two, drivers under 18 are restr",
+      "description": "2",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_54",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "What should you do if your vehicle starts to skid?",
+      "description": "2",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_55",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "In Texas, when is it legal to drive on the left side of the road?",
+      "description": "3",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_56",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "Which of the following is required to teach a beginner to drive?",
+      "description": "2",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_58",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "Which of the following is NOT required equipment on vehicles in Texas?",
+      "description": "3",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_59",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "Which signal indicates that you should not drive in a specific lane?",
+      "description": "3",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_60",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "When parallel parking, you should begin your maneuver when:",
+      "description": "2",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_62",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "When are you required to stop at a railroad grade crossing in Texas?",
+      "description": "2",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_63",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "Under Texas law, at what blood alcohol concentration (BAC) is a person considered legally intoxicate",
+      "description": "2",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_64",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "If you are involved in a crash that results only in damage to a vehicle and that vehicle is blocking",
+      "description": "1",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_66",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "Which of the following is NOT a valid way to show proof of financial responsibility in Texas?",
+      "description": "2",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_67",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "What is the minimum following distance you should maintain when driving behind another vehicle at sp",
+      "description": "3",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_68",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "Which of the following is TRUE about seat belt laws in Texas?",
+      "description": "1",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_70",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "You are driving and you see a traffic sign that is a red triangle pointing downward. This sign means",
+      "description": "1",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_71",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "Which of the following statements about headlights is FALSE?",
+      "description": "2",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_72",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "The law that requires a driver to automatically give consent to a test to determine BAC or drug cont",
+      "description": "1",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_73",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "When can a driver under 21 have their driver license automatically suspended for refusing to take a ",
+      "description": "2",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_74",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "Before making a right turn at a red light, you must:",
+      "description": "1",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_75",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "Which of the following can affect your ability to drive safely?",
+      "description": "3",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_77",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "If blinded by the headlights of an approaching vehicle at night, you should:",
+      "description": "2",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_80",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "If you are driving in foggy conditions, you should use your:",
+      "description": "1",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_81",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "When approaching a school bus stopped with its red lights flashing and stop arm extended on an undiv",
+      "description": "2",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_82",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "In Minnesota, when are you required to dim your high-beam headlights?",
+      "description": "2",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_83",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "What does a flashing yellow traffic signal mean?",
+      "description": "1",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_85",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "If your vehicle starts to skid on ice, you should:",
+      "description": "2",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_86",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "When making a left turn at an intersection without a traffic light, and another vehicle is approachi",
+      "description": "1",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_87",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "What should you do if you miss your highway exit?",
+      "description": "2",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_88",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "Which of the following actions is illegal when encountering a funeral procession?",
+      "description": "2",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_89",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "When approaching a yield sign, you must:",
+      "description": "2",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_90",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "In Minnesota, it is illegal to drive with a blood alcohol concentration (BAC) of:",
+      "description": "3",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_91",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "What is the purpose of the \"Zipper Merge\" in Minnesota work zones?",
+      "description": "1",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_92",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "How far ahead should you signal before making a turn?",
+      "description": "1",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_93",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "When are you allowed to make a left turn on a red light in Minnesota?",
+      "description": "1",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_94",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "If an emergency vehicle with flashing lights is approaching from behind while you are in an intersec",
+      "description": "1",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_95",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "What does a double solid white line on the road signify?",
+      "description": "1",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_96",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "When parallel parking on a two-way street, your right wheels must be within how many inches of the c",
+      "description": "1",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_97",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "Under Minnesota law, children under what age must ride in the back seat if it is available?",
+      "description": "3",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_98",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "Which of the following is true about the use of headlights in Minnesota?",
+      "description": "3",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_DriveQA_99",
+      "section": "QA Dataset",
+      "act": "DriveQA/DriveQA_Dataset",
+      "title": "If you are found guilty of fleeing a police officer on a motor vehicle in Minnesota, you may be sent",
+      "description": "1",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_DUMMY",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Kaggle Dataset Placeholder",
+      "description": "Please download the actual CSV from Kaggle.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_0",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-01-01",
+      "description": "Total Challans: 120, Disposed: 29, Total Amount: 705460",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_1",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-01-02",
+      "description": "Total Challans: 162, Disposed: 39, Total Amount: 944775",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_2",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-01-03",
+      "description": "Total Challans: 122, Disposed: 34, Total Amount: 883850",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_3",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-01-04",
+      "description": "Total Challans: 116, Disposed: 27, Total Amount: 1268950",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_4",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-01-05",
+      "description": "Total Challans: 162, Disposed: 28, Total Amount: 980654",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_5",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-01-06",
+      "description": "Total Challans: 104, Disposed: 24, Total Amount: 746600",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_6",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-01-07",
+      "description": "Total Challans: 108, Disposed: 22, Total Amount: 873250",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_7",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-01-08",
+      "description": "Total Challans: 169, Disposed: 37, Total Amount: 1043102",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_8",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-01-09",
+      "description": "Total Challans: 137, Disposed: 30, Total Amount: 1134850",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_9",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-01-10",
+      "description": "Total Challans: 108, Disposed: 35, Total Amount: 851830",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_10",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-01-11",
+      "description": "Total Challans: 116, Disposed: 18, Total Amount: 919100",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_11",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-01-12",
+      "description": "Total Challans: 130, Disposed: 19, Total Amount: 735750",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_12",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-01-13",
+      "description": "Total Challans: 115, Disposed: 24, Total Amount: 662235",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_13",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-01-14",
+      "description": "Total Challans: 68, Disposed: 15, Total Amount: 429900",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_14",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-01-15",
+      "description": "Total Challans: 116, Disposed: 30, Total Amount: 798500",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_15",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-01-16",
+      "description": "Total Challans: 148, Disposed: 27, Total Amount: 609600",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_16",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-01-17",
+      "description": "Total Challans: 128, Disposed: 37, Total Amount: 747900",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_17",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-01-18",
+      "description": "Total Challans: 84, Disposed: 22, Total Amount: 502650",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_18",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-01-19",
+      "description": "Total Challans: 134, Disposed: 32, Total Amount: 698400",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_19",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-01-20",
+      "description": "Total Challans: 137, Disposed: 33, Total Amount: 742950",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_20",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-01-21",
+      "description": "Total Challans: 112, Disposed: 23, Total Amount: 691149",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_21",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-01-22",
+      "description": "Total Challans: 130, Disposed: 27, Total Amount: 777400",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_22",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-01-23",
+      "description": "Total Challans: 93, Disposed: 25, Total Amount: 533550",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_23",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-01-24",
+      "description": "Total Challans: 74, Disposed: 17, Total Amount: 538250",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_24",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-01-25",
+      "description": "Total Challans: 97, Disposed: 30, Total Amount: 778750",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_25",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-01-26",
+      "description": "Total Challans: 75, Disposed: 13, Total Amount: 453600",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_26",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-01-27",
+      "description": "Total Challans: 83, Disposed: 33, Total Amount: 484120",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_27",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-01-28",
+      "description": "Total Challans: 134, Disposed: 23, Total Amount: 637700",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_28",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-01-29",
+      "description": "Total Challans: 101, Disposed: 29, Total Amount: 675888",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_29",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-01-30",
+      "description": "Total Challans: 109, Disposed: 28, Total Amount: 877630",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_30",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-01-31",
+      "description": "Total Challans: 89, Disposed: 19, Total Amount: 675271",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_31",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-02-01",
+      "description": "Total Challans: 69, Disposed: 21, Total Amount: 482096",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_32",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-02-02",
+      "description": "Total Challans: 116, Disposed: 32, Total Amount: 753650",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_33",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-02-03",
+      "description": "Total Challans: 126, Disposed: 36, Total Amount: 981998",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_34",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-02-04",
+      "description": "Total Challans: 125, Disposed: 37, Total Amount: 860586",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_35",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-02-05",
+      "description": "Total Challans: 118, Disposed: 32, Total Amount: 905220",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_36",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-02-06",
+      "description": "Total Challans: 101, Disposed: 32, Total Amount: 663250",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_37",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-02-07",
+      "description": "Total Challans: 77, Disposed: 29, Total Amount: 510450",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_38",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-02-08",
+      "description": "Total Challans: 78, Disposed: 27, Total Amount: 355750",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_39",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-02-09",
+      "description": "Total Challans: 116, Disposed: 37, Total Amount: 745000",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_40",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-02-10",
+      "description": "Total Challans: 190, Disposed: 54, Total Amount: 1306690",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_41",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-02-11",
+      "description": "Total Challans: 213, Disposed: 54, Total Amount: 1226422",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_42",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-02-12",
+      "description": "Total Challans: 230, Disposed: 56, Total Amount: 1246600",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_43",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-02-13",
+      "description": "Total Challans: 160, Disposed: 46, Total Amount: 1072585",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_44",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-02-14",
+      "description": "Total Challans: 129, Disposed: 23, Total Amount: 616660",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_45",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-02-15",
+      "description": "Total Challans: 89, Disposed: 34, Total Amount: 428200",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_46",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-02-16",
+      "description": "Total Challans: 133, Disposed: 29, Total Amount: 852220",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_47",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-02-17",
+      "description": "Total Challans: 55, Disposed: 18, Total Amount: 228900",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_48",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-02-18",
+      "description": "Total Challans: 141, Disposed: 34, Total Amount: 817650",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_49",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-02-19",
+      "description": "Total Challans: 254, Disposed: 76, Total Amount: 1244750",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_50",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-02-20",
+      "description": "Total Challans: 136, Disposed: 30, Total Amount: 911350",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_51",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-02-21",
+      "description": "Total Challans: 91, Disposed: 24, Total Amount: 522550",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_52",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-02-22",
+      "description": "Total Challans: 87, Disposed: 16, Total Amount: 392300",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_53",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-02-23",
+      "description": "Total Challans: 97, Disposed: 15, Total Amount: 691000",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_54",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-02-24",
+      "description": "Total Challans: 112, Disposed: 30, Total Amount: 746310",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_55",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-02-25",
+      "description": "Total Challans: 110, Disposed: 37, Total Amount: 585950",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_56",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-02-26",
+      "description": "Total Challans: 130, Disposed: 44, Total Amount: 1050150",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_57",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-02-27",
+      "description": "Total Challans: 105, Disposed: 35, Total Amount: 695650",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_58",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-02-28",
+      "description": "Total Challans: 58, Disposed: 16, Total Amount: 378650",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_59",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-03-01",
+      "description": "Total Challans: 61, Disposed: 14, Total Amount: 466400",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_60",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-03-02",
+      "description": "Total Challans: 101, Disposed: 19, Total Amount: 815050",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_61",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-03-03",
+      "description": "Total Challans: 144, Disposed: 27, Total Amount: 1080050",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_62",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-03-04",
+      "description": "Total Challans: 127, Disposed: 26, Total Amount: 931050",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_63",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-03-05",
+      "description": "Total Challans: 75, Disposed: 19, Total Amount: 490500",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_64",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-03-06",
+      "description": "Total Challans: 10, Disposed: 7, Total Amount: 54400",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_65",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-03-07",
+      "description": "Total Challans: 111, Disposed: 23, Total Amount: 527750",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_66",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-03-08",
+      "description": "Total Challans: 80, Disposed: 22, Total Amount: 552350",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_67",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-03-09",
+      "description": "Total Challans: 129, Disposed: 28, Total Amount: 732250",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_68",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-03-10",
+      "description": "Total Challans: 136, Disposed: 35, Total Amount: 897510",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_69",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-03-11",
+      "description": "Total Challans: 131, Disposed: 43, Total Amount: 1048160",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_70",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-03-12",
+      "description": "Total Challans: 120, Disposed: 26, Total Amount: 862460",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_71",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-03-13",
+      "description": "Total Challans: 103, Disposed: 35, Total Amount: 713920",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_72",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-03-14",
+      "description": "Total Challans: 114, Disposed: 30, Total Amount: 686210",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_73",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-03-15",
+      "description": "Total Challans: 129, Disposed: 43, Total Amount: 573599",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_74",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-03-16",
+      "description": "Total Challans: 121, Disposed: 25, Total Amount: 804730",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_75",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-03-17",
+      "description": "Total Challans: 112, Disposed: 24, Total Amount: 761448",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_76",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-03-18",
+      "description": "Total Challans: 161, Disposed: 42, Total Amount: 1276350",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_77",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-03-19",
+      "description": "Total Challans: 156, Disposed: 47, Total Amount: 1648350",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_78",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-03-20",
+      "description": "Total Challans: 99, Disposed: 26, Total Amount: 549955",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_79",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-03-21",
+      "description": "Total Challans: 127, Disposed: 30, Total Amount: 696000",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_80",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-03-22",
+      "description": "Total Challans: 122, Disposed: 41, Total Amount: 725580",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_81",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-03-23",
+      "description": "Total Challans: 123, Disposed: 27, Total Amount: 782500",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_82",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-03-24",
+      "description": "Total Challans: 135, Disposed: 41, Total Amount: 999350",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_83",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-03-25",
+      "description": "Total Challans: 125, Disposed: 28, Total Amount: 877888",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_84",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-03-26",
+      "description": "Total Challans: 110, Disposed: 31, Total Amount: 676080",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_85",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-03-27",
+      "description": "Total Challans: 67, Disposed: 23, Total Amount: 452524",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_86",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-03-28",
+      "description": "Total Challans: 84, Disposed: 22, Total Amount: 497600",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_87",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-03-29",
+      "description": "Total Challans: 100, Disposed: 24, Total Amount: 487700",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_88",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-03-30",
+      "description": "Total Challans: 102, Disposed: 21, Total Amount: 569350",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_89",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-03-31",
+      "description": "Total Challans: 96, Disposed: 26, Total Amount: 488100",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_90",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-04-01",
+      "description": "Total Challans: 73, Disposed: 22, Total Amount: 448875",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_91",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-04-02",
+      "description": "Total Challans: 105, Disposed: 31, Total Amount: 544707",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_92",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-04-03",
+      "description": "Total Challans: 100, Disposed: 24, Total Amount: 743100",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_93",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-04-04",
+      "description": "Total Challans: 83, Disposed: 14, Total Amount: 416660",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_94",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-04-05",
+      "description": "Total Challans: 105, Disposed: 29, Total Amount: 650380",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_95",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-04-06",
+      "description": "Total Challans: 108, Disposed: 23, Total Amount: 730320",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_96",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-04-07",
+      "description": "Total Challans: 119, Disposed: 22, Total Amount: 696440",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_97",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-04-08",
+      "description": "Total Challans: 125, Disposed: 39, Total Amount: 812630",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_98",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-04-09",
+      "description": "Total Challans: 128, Disposed: 40, Total Amount: 1055680",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "DS_Kaggle_Challan_99",
+      "section": "Challan Dataset",
+      "act": "bhanageviraj/indian-traffic-e-challan",
+      "title": "Challan Summary for 2015-04-10",
+      "description": "Total Challans: 72, Disposed: 13, Total Amount: 554400",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "MV177",
+      "section": "Section 177",
+      "act": "Motor Vehicles (Amendment) Act 2019",
+      "title": "General Violation of Traffic Rules",
+      "description": "Violation of any rule or regulation not covered by specific sections",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "All"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [
+        "GENERAL",
+        "RULE_VIOLATION",
+        "MINOR"
+      ],
+      "penalty_ref": "MV177_FINE"
+    },
+    {
+      "rule_id": "MV177A",
+      "section": "Section 177A",
+      "act": "Motor Vehicles (Amendment) Act 2019",
+      "title": "Violation of Road Regulations",
+      "description": "Disobedience of orders, rules or regulations relating to road",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "All"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [
+        "ROAD_REGULATION",
+        "DISOBEDIENCE"
+      ],
+      "penalty_ref": "MV177A_FINE"
+    },
+    {
+      "rule_id": "MV178",
+      "section": "Section 178",
+      "act": "Motor Vehicles (Amendment) Act 2019",
+      "title": "Travelling Without Ticket / Fare Evasion",
+      "description": "Conductor or driver allowing travel without ticket",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "Public Transport",
+        "Bus"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [
+        "BUS",
+        "TICKET",
+        "PUBLIC_TRANSPORT",
+        "FARE"
+      ],
+      "penalty_ref": "MV178_FINE"
+    },
+    {
+      "rule_id": "MV179",
+      "section": "Section 179",
+      "act": "Motor Vehicles (Amendment) Act 2019",
+      "title": "Disobeying Traffic Police Orders",
+      "description": "Failure to comply with lawful directions of a police officer",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "All"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [
+        "POLICE",
+        "DISOBEY",
+        "DIRECTION"
+      ],
+      "penalty_ref": "MV179_FINE"
+    },
+    {
+      "rule_id": "MV180",
+      "section": "Section 180",
+      "act": "Motor Vehicles (Amendment) Act 2019",
+      "title": "Unauthorised Use of Vehicle Without Owner's Consent",
+      "description": "Driving a vehicle without owner's consent",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "All"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [
+        "UNAUTHORIZED",
+        "OWNER_CONSENT",
+        "THEFT_ADJACENT"
+      ],
+      "penalty_ref": "MV180_FINE"
+    },
+    {
+      "rule_id": "MV181",
+      "section": "Section 181",
+      "act": "Motor Vehicles (Amendment) Act 2019",
+      "title": "Driving Without Valid Licence",
+      "description": "Driving a motor vehicle in a public place without a valid driving licence",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "All"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [
+        "NO_LICENCE",
+        "NO_DL",
+        "DRIVING_LICENCE",
+        "WITHOUT_LICENCE"
+      ],
+      "penalty_ref": "MV181_FINE"
+    },
+    {
+      "rule_id": "MV182",
+      "section": "Section 182",
+      "act": "Motor Vehicles (Amendment) Act 2019",
+      "title": "Driving With Disqualified Licence",
+      "description": "Driving a vehicle when disqualified from holding a licence",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "All"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [
+        "DISQUALIFIED_LICENCE",
+        "SUSPENDED_LICENCE"
+      ],
+      "penalty_ref": "MV182_FINE"
+    },
+    {
+      "rule_id": "MV182A",
+      "section": "Section 182A",
+      "act": "Motor Vehicles (Amendment) Act 2019",
+      "title": "Driving Modified / Altered Vehicle",
+      "description": "Altering vehicle from manufacturer specs without approval",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "All"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [
+        "MODIFIED_VEHICLE",
+        "ALTERED_VEHICLE",
+        "MODIFICATION"
+      ],
+      "penalty_ref": "MV182A_FINE"
+    },
+    {
+      "rule_id": "MV183",
+      "section": "Section 183",
+      "act": "Motor Vehicles (Amendment) Act 2019",
+      "title": "Over Speeding",
+      "description": "Driving a motor vehicle at a speed exceeding the limit specified",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "LMV",
+        "HGV",
+        "MGV",
+        "Two-Wheeler"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [
+        "SPEEDING",
+        "OVER_SPEED",
+        "SPEED_LIMIT",
+        "FAST_DRIVING"
+      ],
+      "penalty_ref": "MV183_FINE"
+    },
+    {
+      "rule_id": "MV184",
+      "section": "Section 184",
+      "act": "Motor Vehicles (Amendment) Act 2019",
+      "title": "Dangerous / Rash Driving",
+      "description": "Driving in a manner dangerous to the public including jumping red lights, using mobile phone, driving against traffic flow, overtaking dangerously",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "All"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [
+        "DANGEROUS_DRIVING",
+        "RASH_DRIVING",
+        "RED_LIGHT_JUMP",
+        "SIGNAL_JUMP",
+        "MOBILE_PHONE",
+        "WRONG_SIDE",
+        "OVERTAKING"
+      ],
+      "penalty_ref": "MV184_FINE"
+    },
+    {
+      "rule_id": "MV185",
+      "section": "Section 185",
+      "act": "Motor Vehicles (Amendment) Act 2019",
+      "title": "Drunk Driving / Driving Under Influence",
+      "description": "Driving a motor vehicle in a public place while under the influence of alcohol or drugs. BAC > 30mg/100ml blood",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "All"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [
+        "DRUNK_DRIVING",
+        "DUI",
+        "ALCOHOL",
+        "DRINK_AND_DRIVE",
+        "SUBSTANCE",
+        "DRUG_DRIVING",
+        "BAC"
+      ],
+      "penalty_ref": "MV185_FINE"
+    },
+    {
+      "rule_id": "MV186",
+      "section": "Section 186",
+      "act": "Motor Vehicles (Amendment) Act 2019",
+      "title": "Driving When Mentally or Physically Unfit",
+      "description": "Driving when mentally or physically unfit to drive",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "All"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [
+        "UNFIT",
+        "MEDICAL",
+        "PHYSICALLY_UNFIT",
+        "MENTALLY_UNFIT"
+      ],
+      "penalty_ref": "MV186_FINE"
+    },
+    {
+      "rule_id": "MV189",
+      "section": "Section 189",
+      "act": "Motor Vehicles (Amendment) Act 2019",
+      "title": "Speeding / Racing on Public Roads",
+      "description": "Participating in or organising races or speed trials on public roads",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "All"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [
+        "RACING",
+        "SPEED_TRIAL",
+        "STREET_RACING",
+        "STUNT"
+      ],
+      "penalty_ref": "MV189_FINE"
+    },
+    {
+      "rule_id": "MV192",
+      "section": "Section 192",
+      "act": "Motor Vehicles (Amendment) Act 2019",
+      "title": "Using Vehicle Without Registration (RC)",
+      "description": "Driving or allowing a vehicle to be used without valid Registration Certificate",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "All"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [
+        "NO_RC",
+        "NO_REGISTRATION",
+        "UNREGISTERED_VEHICLE",
+        "REGISTRATION_CERTIFICATE"
+      ],
+      "penalty_ref": "MV192_FINE"
+    },
+    {
+      "rule_id": "MV192A",
+      "section": "Section 192A",
+      "act": "Motor Vehicles (Amendment) Act 2019",
+      "title": "Using Vehicle Without Permit",
+      "description": "Using a transport vehicle without a valid permit",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "Commercial",
+        "Transport"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [
+        "NO_PERMIT",
+        "PERMIT_VIOLATION",
+        "COMMERCIAL_VEHICLE",
+        "TRANSPORT_PERMIT"
+      ],
+      "penalty_ref": "MV192A_FINE"
+    },
+    {
+      "rule_id": "MV194",
+      "section": "Section 194",
+      "act": "Motor Vehicles (Amendment) Act 2019",
+      "title": "Overloading of Vehicle",
+      "description": "Carrying passengers or goods in excess of permitted capacity",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "All"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [
+        "OVERLOADING",
+        "EXCESS_LOAD",
+        "OVERWEIGHT",
+        "CAPACITY_VIOLATION"
+      ],
+      "penalty_ref": "MV194_FINE"
+    },
+    {
+      "rule_id": "MV194A",
+      "section": "Section 194A",
+      "act": "Motor Vehicles (Amendment) Act 2019",
+      "title": "Overloading of Passengers",
+      "description": "Carrying passengers in excess of permitted seating capacity",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "All"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [
+        "PASSENGER_OVERLOADING",
+        "OVERCROWDING",
+        "EXCESS_PASSENGERS"
+      ],
+      "penalty_ref": "MV194A_FINE"
+    },
+    {
+      "rule_id": "MV194B",
+      "section": "Section 194B",
+      "act": "Motor Vehicles (Amendment) Act 2019",
+      "title": "Not Wearing Seat Belt",
+      "description": "Driver or passenger not wearing seat belt while the vehicle is in motion",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "LMV",
+        "Car",
+        "Four-Wheeler"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [
+        "SEAT_BELT",
+        "SEATBELT",
+        "SAFETY_BELT",
+        "NO_SEATBELT"
+      ],
+      "penalty_ref": "MV194B_FINE"
+    },
+    {
+      "rule_id": "MV194C",
+      "section": "Section 194C",
+      "act": "Motor Vehicles (Amendment) Act 2019",
+      "title": "Violation of Motorcycle Safety Rules",
+      "description": "Driving motorcycle without safety equipment or violating rules specific to two-wheelers",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "Two-Wheeler",
+        "Motorcycle",
+        "Scooter"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [
+        "MOTORCYCLE",
+        "TWO-WHEELER",
+        "SAFETY_RULES",
+        "SCOOTER"
+      ],
+      "penalty_ref": "MV194C_FINE"
+    },
+    {
+      "rule_id": "MV194D",
+      "section": "Section 194D",
+      "act": "Motor Vehicles (Amendment) Act 2019",
+      "title": "Not Wearing Helmet",
+      "description": "Riding a motorcycle or being a pillion rider without wearing a protective helmet",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "Two-Wheeler",
+        "Motorcycle",
+        "Scooter",
+        "Moped"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [
+        "NO_HELMET",
+        "HELMET",
+        "TWO-WHEELER_SAFETY",
+        "PILLION"
+      ],
+      "penalty_ref": "MV194D_FINE"
+    },
+    {
+      "rule_id": "MV194E",
+      "section": "Section 194E",
+      "act": "Motor Vehicles (Amendment) Act 2019",
+      "title": "Failure to Allow Passage to Emergency Vehicles",
+      "description": "Not giving way to ambulance, fire service or other emergency vehicles",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "All"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [
+        "AMBULANCE",
+        "EMERGENCY_VEHICLE",
+        "FIRE_TRUCK",
+        "NOT_GIVING_WAY"
+      ],
+      "penalty_ref": "MV194E_FINE"
+    },
+    {
+      "rule_id": "MV194F",
+      "section": "Section 194F",
+      "act": "Motor Vehicles (Amendment) Act 2019",
+      "title": "Use of Mobile Phone While Driving",
+      "description": "Using a hand-held communication device (mobile phone) while driving",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "All"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [
+        "MOBILE_PHONE",
+        "PHONE_WHILE_DRIVING",
+        "DISTRACTED_DRIVING",
+        "HAND-HELD_DEVICE"
+      ],
+      "penalty_ref": "MV194F_FINE"
+    },
+    {
+      "rule_id": "MV196",
+      "section": "Section 196",
+      "act": "Motor Vehicles (Amendment) Act 2019",
+      "title": "Driving Without Insurance",
+      "description": "Using or driving a vehicle without a valid third-party insurance policy",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "All"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [
+        "NO_INSURANCE",
+        "UNINSURED_VEHICLE",
+        "THIRD_PARTY_INSURANCE",
+        "INSURANCE_EXPIRED"
+      ],
+      "penalty_ref": "MV196_FINE"
+    },
+    {
+      "rule_id": "MV197",
+      "section": "Section 197",
+      "act": "Motor Vehicles (Amendment) Act 2019",
+      "title": "Taking Vehicle Without Authority",
+      "description": "Taking or using a vehicle without lawful authority",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "All"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [
+        "UNAUTHORIZED_USE",
+        "THEFT"
+      ],
+      "penalty_ref": "MV197_FINE"
+    },
+    {
+      "rule_id": "MV198",
+      "section": "Section 198",
+      "act": "Motor Vehicles (Amendment) Act 2019",
+      "title": "Interference With Vehicle",
+      "description": "Tampering or interfering with a motor vehicle",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "All"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [
+        "TAMPERING",
+        "INTERFERENCE",
+        "VANDALISM"
+      ],
+      "penalty_ref": "MV198_FINE"
+    },
+    {
+      "rule_id": "MV199",
+      "section": "Section 199",
+      "act": "Motor Vehicles (Amendment) Act 2019",
+      "title": "Offences by Juveniles / Underage Driving",
+      "description": "Motor vehicle driven by a person under 18 years of age. Guardian/owner held liable.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "All"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [
+        "UNDERAGE_DRIVING",
+        "JUVENILE",
+        "MINOR_DRIVING",
+        "BELOW_18"
+      ],
+      "penalty_ref": "MV199_FINE"
+    },
+    {
+      "rule_id": "MV206",
+      "section": "Section 206",
+      "act": "Motor Vehicles (Amendment) Act 2019",
+      "title": "Failure to Produce Documents on Demand",
+      "description": "Failing to produce DL, RC, insurance, PUC or permit when demanded by an officer",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "All"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [
+        "DOCUMENTS",
+        "DL",
+        "RC",
+        "INSURANCE",
+        "PUC",
+        "PRODUCE_DOCUMENTS"
+      ],
+      "penalty_ref": "MV206_FINE"
+    },
+    {
+      "rule_id": "MV210B",
+      "section": "Section 210B",
+      "act": "Motor Vehicles (Amendment) Act 2019",
+      "title": "Abetment of Offences by Enforcing Authority",
+      "description": "Any enforcing authority found violating this Act shall pay twice the penalty",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "All"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [
+        "POLICE",
+        "ENFORCING_AUTHORITY",
+        "CORRUPTION"
+      ],
+      "penalty_ref": "MV210B_FINE"
+    },
+    {
+      "rule_id": "FAQ_FAQ001",
+      "section": "FAQ",
+      "act": "FAQ Database",
+      "title": "What is the fine for driving without a helmet in India?",
+      "description": "Under Section 194D of the Motor Vehicles (Amendment) Act 2019, the fine for riding a two-wheeler without a helmet is \u20b91,000. Additionally, your driving licence will be disqualified for 3 months. This applies to both the rider and the pillion passenger. The helmet must be BIS-approved (IS:4151 standard). Maharashtra has reduced this to \u20b9500 while most other states follow the central \u20b91,000 fine.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "FAQ_FAQ002",
+      "section": "FAQ",
+      "act": "FAQ Database",
+      "title": "What is the fine for drunk driving in India?",
+      "description": "Under Section 185 of the MV Amendment Act 2019, drunk driving penalties are: First offence - Fine of \u20b910,000 and/or imprisonment up to 6 months. Second offence (within 3 years) - Fine of \u20b915,000 and/or imprisonment up to 2 years. The legal BAC (Blood Alcohol Content) limit is 30mg per 100ml of blood. The offence is non-compoundable meaning it cannot be settled on the spot and goes to court. Your licence can be suspended or cancelled.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "FAQ_FAQ003",
+      "section": "FAQ",
+      "act": "FAQ Database",
+      "title": "What happens if I drive without insurance?",
+      "description": "Under Section 196 of the MV Amendment Act 2019: First offence - Fine of \u20b92,000 and/or imprisonment up to 3 months. Second offence - Fine of \u20b94,000 and/or imprisonment up to 3 months. Third-party insurance is mandatory for ALL vehicles in India under the Motor Vehicles Act. Comprehensive insurance is optional but recommended. You can buy insurance online through IRDAI-registered insurers.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "FAQ_FAQ004",
+      "section": "FAQ",
+      "act": "FAQ Database",
+      "title": "What is the fine for jumping a red light?",
+      "description": "Jumping a red light is classified as 'Dangerous Driving' under Section 184 of the MV Act 2019. Fine: First offence - \u20b91,000 to \u20b95,000 and/or imprisonment up to 6 months. Second offence - \u20b910,000 and/or imprisonment up to 2 years. In Delhi specifically, the fine is \u20b95,000 for signal jumping. The offence is non-compoundable and will be recorded against your licence.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "FAQ_FAQ005",
+      "section": "FAQ",
+      "act": "FAQ Database",
+      "title": "What is the fine for using a mobile phone while driving?",
+      "description": "Under Section 194F of the MV Amendment Act 2019: First offence - \u20b91,000 to \u20b95,000. Second offence - \u20b910,000. Using a hand-held mobile phone while driving is considered distracted driving. This includes texting, calling, or any other use of the phone while the vehicle is in motion. In Delhi, the fine is fixed at \u20b95,000 for mobile phone use while driving.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "FAQ_FAQ006",
+      "section": "FAQ",
+      "act": "FAQ Database",
+      "title": "What are the documents I must carry while driving?",
+      "description": "You must carry these documents while driving any motor vehicle in India: 1. Driving Licence (DL) - valid and appropriate for the vehicle class. 2. Registration Certificate (RC) - proving vehicle ownership and registration. 3. Insurance Certificate - valid third-party or comprehensive insurance. 4. PUC Certificate (Pollution Under Control) - valid emission certificate. 5. Permit (for commercial vehicles). Digital copies in DigiLocker are legally valid under Section 139 of the IT Act. Failure to produce documents when demanded by police under Section 206 carries a fine of \u20b9500.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "FAQ_FAQ007",
+      "section": "FAQ",
+      "act": "FAQ Database",
+      "title": "Can I use DigiLocker documents during traffic checking?",
+      "description": "Yes. As per a 2018 Government of India circular and the Information Technology Act 2000, digital documents stored in DigiLocker are legally equivalent to physical originals. The Parivahan Sewa (parivahan.gov.in) also provides mParivahan app for digital documents. Police officers are required to accept digital documents. However, if there is a dispute, physical documents are advisable to carry as backup. DigiLocker can be accessed at digilocker.gov.in or via the DigiLocker app.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "FAQ_FAQ008",
+      "section": "FAQ",
+      "act": "FAQ Database",
+      "title": "What is the fine for overspeeding in a school zone?",
+      "description": "In a school zone (typically within 500m of a school), the speed limit is 25 kmph. Any speeding in such zones is treated with higher severity. The base fine under Section 183 for a car (LMV) is \u20b91,000\u2013\u20b92,000. In school zones, courts can apply higher penalties as the offence endangers children. Some states like Karnataka apply a 2x multiplier in school zones. Additionally, dangerous driving near schools may be charged under Section 184 (Dangerous Driving) with fines up to \u20b95,000.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "FAQ_FAQ009",
+      "section": "FAQ",
+      "act": "FAQ Database",
+      "title": "What is the speed limit in Indian cities?",
+      "description": "As per MoRTH notification, general speed limits in India are: Urban/City roads: 50 kmph for cars, 50 kmph for two-wheelers. State Highways: 80 kmph for cars, 60 kmph for two-wheelers, 60 kmph for HGVs. National Highways: 100 kmph for cars, 80 kmph for two-wheelers, 80 kmph for HGVs. Expressways: 120 kmph for cars, two-wheelers NOT allowed, 80 kmph for HGVs. School/Hospital zones: 25 kmph. These are maximum limits - lower limits posted on signs take precedence.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "FAQ_FAQ010",
+      "section": "FAQ",
+      "act": "FAQ Database",
+      "title": "What is the fine for driving without a valid RC (Registration Certificate)?",
+      "description": "Under Section 192 of the MV Amendment Act 2019: First offence - Fine of \u20b92,000\u2013\u20b95,000 and/or imprisonment up to 6 months. Subsequent offences - Fine up to \u20b910,000. The Registration Certificate (RC) must be valid and match the vehicle. RC must be renewed on expiry (typically every 15 years for new vehicles). Expired RC is treated the same as no RC. In Tamil Nadu and Delhi, the fine for no RC or expired RC is \u20b95,000.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "FAQ_FAQ011",
+      "section": "FAQ",
+      "act": "FAQ Database",
+      "title": "What is the fine for not wearing a seatbelt?",
+      "description": "Under Section 194B of the MV Amendment Act 2019, the fine for not wearing a seatbelt is \u20b91,000. This applies to: The driver, all front-seat passengers, and all rear-seat passengers. Child restraint systems (car seats) are mandatory for children under 14 years. In Maharashtra, the fine has been reduced to \u20b9500. Habitual offenders may face enhanced penalties.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "FAQ_FAQ012",
+      "section": "FAQ",
+      "act": "FAQ Database",
+      "title": "What is the fine for underage driving in India?",
+      "description": "Under Section 199 of the MV Amendment Act 2019, for underage/juvenile driving: The guardian or vehicle owner (not the juvenile) is held liable. Fine: \u20b925,000. Imprisonment: Up to 3 years for the guardian. The vehicle's registration certificate will be cancelled. The juvenile will be tried under the Juvenile Justice Act 2015. The minimum legal driving age in India is 18 years for all motorised vehicles, and 16 years for gearless two-wheelers up to 50cc with parental consent.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "FAQ_FAQ013",
+      "section": "FAQ",
+      "act": "FAQ Database",
+      "title": "How do I pay a traffic challan online?",
+      "description": "You can pay traffic challans online through: 1. Official eChallan portal: echallan.parivahan.gov.in - enter vehicle number, challan number, or DL number. 2. Parivahan App (mParivahan) - available on Android and iOS. 3. State-specific portals (e.g., Delhi: delhitrafficpolice.nic.in). Payment methods accepted: UPI, debit/credit cards, net banking, digital wallets (Paytm, GPay, PhonePe). On-spot payment: Through handheld POS machines carried by traffic police.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "FAQ_FAQ014",
+      "section": "FAQ",
+      "act": "FAQ Database",
+      "title": "What is the PUC certificate and what is the fine for not having it?",
+      "description": "PUC stands for Pollution Under Control certificate. It is a certificate proving your vehicle's emissions are within permissible limits. Validity: 6 months for petrol/diesel vehicles, 1 year for CNG vehicles. Electric vehicles do not require PUC. Fine for no PUC: Under Section 190(2), the fine is \u20b910,000 and/or imprisonment up to 6 months for first offence. PUC can be obtained at any authorized PUC checking center (petrol stations, RTO-authorized centers). Cost is nominal (\u20b960-\u20b9100).",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "FAQ_FAQ015",
+      "section": "FAQ",
+      "act": "FAQ Database",
+      "title": "What are the rules for overloading a vehicle?",
+      "description": "Under Section 194 of the MV Amendment Act 2019, overloading penalties are very steep: Base fine: \u20b920,000 for overloading a goods vehicle. Additional: \u20b92,000 for every extra tonne beyond permitted limit. The driver's licence can be disqualified, and the vehicle's fitness certificate can be cancelled. For passenger overloading (Section 194A): \u20b91,000 per extra passenger. The permitted load is specified in the vehicle's registration certificate (RC). Road transport authorities can also seize the vehicle.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "FAQ_FAQ016",
+      "section": "FAQ",
+      "act": "FAQ Database",
+      "title": "Is triple riding on a two-wheeler allowed?",
+      "description": "No. Triple riding (more than 2 persons on a two-wheeler) is prohibited across India. The maximum permitted is: 1 rider + 1 pillion passenger (2 persons total). Children below a certain age (varies by state, typically below 12 years or below 9 years) may be allowed additionally on the fuel tank area in some states. Fine for triple riding: Treated as violation of Section 128 (safety rules for motorcycles) and Section 194C, with a fine of \u20b91,000. In some states, triple riding is specifically penalized under local transport rules.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "FAQ_FAQ017",
+      "section": "FAQ",
+      "act": "FAQ Database",
+      "title": "What is the difference between compoundable and non-compoundable traffic offences?",
+      "description": "Compoundable offences: Can be settled on the spot by paying the fine to the traffic police officer or via online payment. No court appearance needed. Examples: No helmet, no seatbelt, over-speeding (first time), no documents. Non-compoundable offences: Must go to court. Cannot be settled on the spot. Requires a court appearance. Examples: Drunk driving, dangerous driving, racing, underage driving, driving with cancelled licence. Under Section 200 of the MV Act, specific sections are listed as compoundable. For non-compoundable offences, a court date is given and the magistrate decides the final fine/punishment.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "FAQ_FAQ018",
+      "section": "FAQ",
+      "act": "FAQ Database",
+      "title": "What is the rule about not giving way to an ambulance?",
+      "description": "Under Section 194E of the MV Amendment Act 2019, failing to give way to emergency vehicles (ambulance, fire service vehicle, police vehicle) carries: Fine of \u20b910,000 and/or imprisonment up to 6 months. All vehicles must immediately move to the side of the road and stop to allow emergency vehicles to pass. Blocking an ambulance can directly cost lives and is treated very seriously. The Supreme Court of India has also mandated strict enforcement of this rule. Courts have the discretion to enhance penalties in cases where delay contributed to loss of life.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "FAQ_FAQ019",
+      "section": "FAQ",
+      "act": "FAQ Database",
+      "title": "Can I contest a wrongful traffic challan?",
+      "description": "Yes. If you believe a challan was wrongly issued: 1. Gather evidence: Photos, CCTV footage, witness statements, dashcam footage. 2. Online complaint: Visit the state traffic police website or echallan.parivahan.gov.in and file a complaint. 3. Court appeal: Appear on the court date mentioned in the challan and present your case. You have the right to contest any challan in a court of law. The magistrate will review the evidence and decide. If the court finds the challan was wrongfully issued, it will be dismissed and no fine collected.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
+    },
+    {
+      "rule_id": "FAQ_FAQ020",
+      "section": "FAQ",
+      "act": "FAQ Database",
+      "title": "What happens if I don't pay a traffic challan?",
+      "description": "If you fail to pay a traffic challan: 1. A court summons will be issued (typically after 60 days). 2. Additional penalties may accumulate. 3. Your vehicle's RC renewal or transfer may be blocked. 4. Your DL renewal may be blocked. 5. In serious cases, a warrant may be issued. 6. The challan may be upgraded to a 'court challan' with higher fines. It is always advisable to pay challans promptly or contest them legally within the given time frame.",
+      "applies_to": [
+        "ALL"
+      ],
+      "vehicle_classes": [
+        "ALL"
+      ],
+      "state_overrides": [],
+      "related_offence_codes": [],
+      "penalty_ref": "DATASET_INFO"
     }
   ]
 }

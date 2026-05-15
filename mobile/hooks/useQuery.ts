@@ -1,111 +1,96 @@
-import { useState } from 'react';
-import { Platform } from 'react-native';
+import { useState, useEffect } from 'react';
+import { Platform, Alert } from 'react-native';
+import Constants from 'expo-constants';
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Types
-// ─────────────────────────────────────────────────────────────────────────────
-
-export interface ToolCall {
-  tool: string;
-  params: Record<string, unknown>;
-  result: Record<string, unknown>;
-}
-
-export interface AgentResponse {
-  /** Natural language answer written by the AI agent */
-  response: string;
-  /** "ok" = Gemini answered | "fallback" = keyword mode | "error" */
-  status: 'ok' | 'fallback' | 'error';
-  /** List of tools the agent called to build this answer */
-  tools_used: ToolCall[];
-  /** True when Gemini generated the answer */
-  agent_powered: boolean;
-  /** Which model was used (e.g. "gemini-1.5-flash") */
-  model?: string;
+interface QueryResult {
+  status: string;
+  intent: string;
+  text: string;
+  query_summary: string;
+  fine: {
+    amount_inr: number | null;
+    section_ref: string;
+    source_url: string;
+    data_as_of: string;
+  } | null;
+  rule: {
+    rule_id: string;
+    title: string;
+    description: string;
+    state_override?: string;
+  } | null;
 }
 
 interface UseQueryResult {
-  data: AgentResponse | null;
+  data: QueryResult | null;
   isLoading: boolean;
   isOffline: boolean;
   error: string | null;
-  submitQuery: (text: string, history?: ConversationTurn[]) => Promise<void>;
+  submitQuery: (text: string) => Promise<void>;
 }
 
-export interface ConversationTurn {
-  role: 'user' | 'model';
-  parts: string[];
-}
-
-// ─────────────────────────────────────────────────────────────────────────────
-// Backend URL — change to your machine's IP for physical device testing
-// ─────────────────────────────────────────────────────────────────────────────
-
-const BACKEND_URL = 'http://192.168.29.212:8000';
-
-
-// ─────────────────────────────────────────────────────────────────────────────
-// Hook
-// ─────────────────────────────────────────────────────────────────────────────
+import * as Location from 'expo-location';
 
 export function useQuery(): UseQueryResult {
-  const [data, setData] = useState<AgentResponse | null>(null);
+  const [data, setData] = useState<QueryResult | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [isOffline, setIsOffline] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const submitQuery = async (
-    text: string,
-    history: ConversationTurn[] = [],
-  ): Promise<void> => {
-    if (!text.trim()) return;
+  const [session, setSession] = useState<any>({});
 
+  const submitQuery = async (text: string) => {
     setIsLoading(true);
     setError(null);
     setData(null);
+    
+    // Secure USB Tunnel
+    let host = '127.0.0.1';
+    
+    const BASE_URL = `http://${host}:8000`;
 
     try {
-      // ── Call the AI agent endpoint ────────────────────────────────────────
-      const response = await fetch(`${BACKEND_URL}/query`, {
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 60000); // 60 seconds for AI processing
+
+      let gps = null;
+      try {
+        const { status } = await Location.getForegroundPermissionsAsync();
+        if (status === 'granted') {
+          const loc = await Location.getCurrentPositionAsync({});
+          gps = { lat: loc.coords.latitude, lon: loc.coords.longitude };
+        }
+      } catch(e) {}
+
+      // Attempt network fetch
+      const response = await fetch(`${BASE_URL}/query`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          text,       // ✅ Fixed: was incorrectly "query" before
-          history,    // Conversation context for multi-turn memory
-          gps: null,  // TODO: pass real GPS from expo-location
-        }),
+        body: JSON.stringify({ text: text, session: session, gps: gps }),
+        signal: controller.signal as any,
       });
 
-      if (!response.ok) {
-        const errBody = await response.text();
-        throw new Error(`Server error ${response.status}: ${errBody}`);
+      clearTimeout(timeoutId);
+
+      if (response.ok) {
+        const result = await response.json();
+        setData(result);
+        if (result.session) {
+          setSession((prevSession: any) => ({ ...prevSession, ...result.session }));
+        }
+        setIsOffline(false);
+      } else {
+        throw new Error('Network response not ok');
       }
-
-      const result: AgentResponse = await response.json();
-      setData(result);
-      setIsOffline(false);
-
-    } catch (err) {
-      const message = err instanceof Error ? err.message : String(err);
-      console.warn('[useQuery] Network failed, switching to offline mode:', message);
+    } catch (err: any) {
+      console.log(`Network failed for ${BASE_URL}:`, err);
       setIsOffline(true);
+      
+      const fetchErrorMsg = err.name === 'AbortError' 
+        ? `[TIMEOUT] Request to ${BASE_URL} timed out. Is the backend frozen?` 
+        : `[CONNECT_ERROR] Failed to reach ${BASE_URL} (${err.message}). Are you on the same Wi-Fi?`;
 
-      // ── Offline fallback: static helpful message ──────────────────────────
-      // In production this would query the local SQLite DB via useLocalDB.
-      setData({
-        status: 'fallback',
-        response:
-          'You appear to be offline. Basic traffic law information:\n\n' +
-          '• No Helmet (2-Wheeler): ₹1,000 (Section 129 MV Act)\n' +
-          '• Over Speeding (LMV): ₹1,000–₹2,000 (Section 183)\n' +
-          '• Drunk Driving: ₹10,000 + imprisonment (Section 185)\n' +
-          '• Red Light Jumping: ₹1,000–₹5,000 (Section 184)\n' +
-          '• No Seatbelt: ₹1,000 (Section 194B)\n\n' +
-          '⚠️ Connect to internet for AI-powered, state-specific answers.',
-        tools_used: [],
-        agent_powered: false,
-      });
-
+      setError(fetchErrorMsg);
     } finally {
       setIsLoading(false);
     }

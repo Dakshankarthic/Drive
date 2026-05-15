@@ -1,0 +1,159 @@
+[
+  {
+    "id": "FAQ001",
+    "question": "What is the fine for driving without a helmet in India?",
+    "answer": "Under Section 194D of the Motor Vehicles (Amendment) Act 2019, the fine for riding a two-wheeler without a helmet is ₹1,000. Additionally, your driving licence will be disqualified for 3 months. This applies to both the rider and the pillion passenger. The helmet must be BIS-approved (IS:4151 standard). Maharashtra has reduced this to ₹500 while most other states follow the central ₹1,000 fine.",
+    "category": "Two-Wheeler",
+    "section": "Section 194D",
+    "tags": ["helmet", "no helmet", "two-wheeler", "fine", "penalty"]
+  },
+  {
+    "id": "FAQ002",
+    "question": "What is the fine for drunk driving in India?",
+    "answer": "Under Section 185 of the MV Amendment Act 2019, drunk driving penalties are: First offence - Fine of ₹10,000 and/or imprisonment up to 6 months. Second offence (within 3 years) - Fine of ₹15,000 and/or imprisonment up to 2 years. The legal BAC (Blood Alcohol Content) limit is 30mg per 100ml of blood. The offence is non-compoundable meaning it cannot be settled on the spot and goes to court. Your licence can be suspended or cancelled.",
+    "category": "Driving Under Influence",
+    "section": "Section 185",
+    "tags": ["drunk driving", "DUI", "alcohol", "BAC", "drink and drive"]
+  },
+  {
+    "id": "FAQ003",
+    "question": "What happens if I drive without insurance?",
+    "answer": "Under Section 196 of the MV Amendment Act 2019: First offence - Fine of ₹2,000 and/or imprisonment up to 3 months. Second offence - Fine of ₹4,000 and/or imprisonment up to 3 months. Third-party insurance is mandatory for ALL vehicles in India under the Motor Vehicles Act. Comprehensive insurance is optional but recommended. You can buy insurance online through IRDAI-registered insurers.",
+    "category": "Documents",
+    "section": "Section 196",
+    "tags": ["no insurance", "without insurance", "third party", "mandatory insurance"]
+  },
+  {
+    "id": "FAQ004",
+    "question": "What is the fine for jumping a red light?",
+    "answer": "Jumping a red light is classified as 'Dangerous Driving' under Section 184 of the MV Act 2019. Fine: First offence - ₹1,000 to ₹5,000 and/or imprisonment up to 6 months. Second offence - ₹10,000 and/or imprisonment up to 2 years. In Delhi specifically, the fine is ₹5,000 for signal jumping. The offence is non-compoundable and will be recorded against your licence.",
+    "category": "Dangerous Driving",
+    "section": "Section 184",
+    "tags": ["red light", "signal jump", "traffic signal", "jumping signal"]
+  },
+  {
+    "id": "FAQ005",
+    "question": "What is the fine for using a mobile phone while driving?",
+    "answer": "Under Section 194F of the MV Amendment Act 2019: First offence - ₹1,000 to ₹5,000. Second offence - ₹10,000. Using a hand-held mobile phone while driving is considered distracted driving. This includes texting, calling, or any other use of the phone while the vehicle is in motion. In Delhi, the fine is fixed at ₹5,000 for mobile phone use while driving.",
+    "category": "Distracted Driving",
+    "section": "Section 194F",
+    "tags": ["mobile phone", "phone driving", "texting", "distracted driving", "hand-held device"]
+  },
+  {
+    "id": "FAQ006",
+    "question": "What are the documents I must carry while driving?",
+    "answer": "You must carry these documents while driving any motor vehicle in India: 1. Driving Licence (DL) - valid and appropriate for the vehicle class. 2. Registration Certificate (RC) - proving vehicle ownership and registration. 3. Insurance Certificate - valid third-party or comprehensive insurance. 4. PUC Certificate (Pollution Under Control) - valid emission certificate. 5. Permit (for commercial vehicles). Digital copies in DigiLocker are legally valid under Section 139 of the IT Act. Failure to produce documents when demanded by police under Section 206 carries a fine of ₹500.",
+    "category": "Documents",
+    "section": "Section 130, 206",
+    "tags": ["documents", "DL", "RC", "insurance", "PUC", "permit", "digilocker"]
+  },
+  {
+    "id": "FAQ007",
+    "question": "Can I use DigiLocker documents during traffic checking?",
+    "answer": "Yes. As per a 2018 Government of India circular and the Information Technology Act 2000, digital documents stored in DigiLocker are legally equivalent to physical originals. The Parivahan Sewa (parivahan.gov.in) also provides mParivahan app for digital documents. Police officers are required to accept digital documents. However, if there is a dispute, physical documents are advisable to carry as backup. DigiLocker can be accessed at digilocker.gov.in or via the DigiLocker app.",
+    "category": "Documents",
+    "section": "IT Act Section 139",
+    "tags": ["DigiLocker", "digital documents", "mParivahan", "digital DL", "digital RC"]
+  },
+  {
+    "id": "FAQ008",
+    "question": "What is the fine for overspeeding in a school zone?",
+    "answer": "In a school zone (typically within 500m of a school), the speed limit is 25 kmph. Any speeding in such zones is treated with higher severity. The base fine under Section 183 for a car (LMV) is ₹1,000–₹2,000. In school zones, courts can apply higher penalties as the offence endangers children. Some states like Karnataka apply a 2x multiplier in school zones. Additionally, dangerous driving near schools may be charged under Section 184 (Dangerous Driving) with fines up to ₹5,000.",
+    "category": "Speed Limits",
+    "section": "Section 183",
+    "tags": ["school zone", "speed limit", "children", "school area speed"]
+  },
+  {
+    "id": "FAQ009",
+    "question": "What is the speed limit in Indian cities?",
+    "answer": "As per MoRTH notification, general speed limits in India are: Urban/City roads: 50 kmph for cars, 50 kmph for two-wheelers. State Highways: 80 kmph for cars, 60 kmph for two-wheelers, 60 kmph for HGVs. National Highways: 100 kmph for cars, 80 kmph for two-wheelers, 80 kmph for HGVs. Expressways: 120 kmph for cars, two-wheelers NOT allowed, 80 kmph for HGVs. School/Hospital zones: 25 kmph. These are maximum limits - lower limits posted on signs take precedence.",
+    "category": "Speed Limits",
+    "section": "Section 183",
+    "tags": ["speed limit", "city speed", "highway speed", "expressway speed"]
+  },
+  {
+    "id": "FAQ010",
+    "question": "What is the fine for driving without a valid RC (Registration Certificate)?",
+    "answer": "Under Section 192 of the MV Amendment Act 2019: First offence - Fine of ₹2,000–₹5,000 and/or imprisonment up to 6 months. Subsequent offences - Fine up to ₹10,000. The Registration Certificate (RC) must be valid and match the vehicle. RC must be renewed on expiry (typically every 15 years for new vehicles). Expired RC is treated the same as no RC. In Tamil Nadu and Delhi, the fine for no RC or expired RC is ₹5,000.",
+    "category": "Documents",
+    "section": "Section 192",
+    "tags": ["no RC", "registration certificate", "expired RC", "vehicle registration"]
+  },
+  {
+    "id": "FAQ011",
+    "question": "What is the fine for not wearing a seatbelt?",
+    "answer": "Under Section 194B of the MV Amendment Act 2019, the fine for not wearing a seatbelt is ₹1,000. This applies to: The driver, all front-seat passengers, and all rear-seat passengers. Child restraint systems (car seats) are mandatory for children under 14 years. In Maharashtra, the fine has been reduced to ₹500. Habitual offenders may face enhanced penalties.",
+    "category": "Safety",
+    "section": "Section 194B",
+    "tags": ["seat belt", "seatbelt", "no seatbelt", "safety belt"]
+  },
+  {
+    "id": "FAQ012",
+    "question": "What is the fine for underage driving in India?",
+    "answer": "Under Section 199 of the MV Amendment Act 2019, for underage/juvenile driving: The guardian or vehicle owner (not the juvenile) is held liable. Fine: ₹25,000. Imprisonment: Up to 3 years for the guardian. The vehicle's registration certificate will be cancelled. The juvenile will be tried under the Juvenile Justice Act 2015. The minimum legal driving age in India is 18 years for all motorised vehicles, and 16 years for gearless two-wheelers up to 50cc with parental consent.",
+    "category": "Juvenile",
+    "section": "Section 199",
+    "tags": ["underage driving", "juvenile", "minor driving", "below 18", "teenage driving"]
+  },
+  {
+    "id": "FAQ013",
+    "question": "How do I pay a traffic challan online?",
+    "answer": "You can pay traffic challans online through: 1. Official eChallan portal: echallan.parivahan.gov.in - enter vehicle number, challan number, or DL number. 2. Parivahan App (mParivahan) - available on Android and iOS. 3. State-specific portals (e.g., Delhi: delhitrafficpolice.nic.in). Payment methods accepted: UPI, debit/credit cards, net banking, digital wallets (Paytm, GPay, PhonePe). On-spot payment: Through handheld POS machines carried by traffic police.",
+    "category": "Challan Payment",
+    "tags": ["pay challan", "online payment", "echallan", "Parivahan", "challan payment"]
+  },
+  {
+    "id": "FAQ014",
+    "question": "What is the PUC certificate and what is the fine for not having it?",
+    "answer": "PUC stands for Pollution Under Control certificate. It is a certificate proving your vehicle's emissions are within permissible limits. Validity: 6 months for petrol/diesel vehicles, 1 year for CNG vehicles. Electric vehicles do not require PUC. Fine for no PUC: Under Section 190(2), the fine is ₹10,000 and/or imprisonment up to 6 months for first offence. PUC can be obtained at any authorized PUC checking center (petrol stations, RTO-authorized centers). Cost is nominal (₹60-₹100).",
+    "category": "Documents",
+    "section": "Section 190",
+    "tags": ["PUC", "pollution certificate", "emission certificate", "PUCC"]
+  },
+  {
+    "id": "FAQ015",
+    "question": "What are the rules for overloading a vehicle?",
+    "answer": "Under Section 194 of the MV Amendment Act 2019, overloading penalties are very steep: Base fine: ₹20,000 for overloading a goods vehicle. Additional: ₹2,000 for every extra tonne beyond permitted limit. The driver's licence can be disqualified, and the vehicle's fitness certificate can be cancelled. For passenger overloading (Section 194A): ₹1,000 per extra passenger. The permitted load is specified in the vehicle's registration certificate (RC). Road transport authorities can also seize the vehicle.",
+    "category": "Commercial Vehicles",
+    "section": "Section 194, 194A",
+    "tags": ["overloading", "excess load", "overweight", "truck overloading", "passenger overloading"]
+  },
+  {
+    "id": "FAQ016",
+    "question": "Is triple riding on a two-wheeler allowed?",
+    "answer": "No. Triple riding (more than 2 persons on a two-wheeler) is prohibited across India. The maximum permitted is: 1 rider + 1 pillion passenger (2 persons total). Children below a certain age (varies by state, typically below 12 years or below 9 years) may be allowed additionally on the fuel tank area in some states. Fine for triple riding: Treated as violation of Section 128 (safety rules for motorcycles) and Section 194C, with a fine of ₹1,000. In some states, triple riding is specifically penalized under local transport rules.",
+    "category": "Two-Wheeler",
+    "section": "Section 128, 194C",
+    "tags": ["triple riding", "three persons", "pillion", "two-wheeler rules"]
+  },
+  {
+    "id": "FAQ017",
+    "question": "What is the difference between compoundable and non-compoundable traffic offences?",
+    "answer": "Compoundable offences: Can be settled on the spot by paying the fine to the traffic police officer or via online payment. No court appearance needed. Examples: No helmet, no seatbelt, over-speeding (first time), no documents. Non-compoundable offences: Must go to court. Cannot be settled on the spot. Requires a court appearance. Examples: Drunk driving, dangerous driving, racing, underage driving, driving with cancelled licence. Under Section 200 of the MV Act, specific sections are listed as compoundable. For non-compoundable offences, a court date is given and the magistrate decides the final fine/punishment.",
+    "category": "Legal Process",
+    "section": "Section 200",
+    "tags": ["compoundable", "non-compoundable", "court challan", "on spot fine", "settlement"]
+  },
+  {
+    "id": "FAQ018",
+    "question": "What is the rule about not giving way to an ambulance?",
+    "answer": "Under Section 194E of the MV Amendment Act 2019, failing to give way to emergency vehicles (ambulance, fire service vehicle, police vehicle) carries: Fine of ₹10,000 and/or imprisonment up to 6 months. All vehicles must immediately move to the side of the road and stop to allow emergency vehicles to pass. Blocking an ambulance can directly cost lives and is treated very seriously. The Supreme Court of India has also mandated strict enforcement of this rule. Courts have the discretion to enhance penalties in cases where delay contributed to loss of life.",
+    "category": "Emergency Vehicles",
+    "section": "Section 194E",
+    "tags": ["ambulance", "emergency vehicle", "fire engine", "not giving way", "green corridor"]
+  },
+  {
+    "id": "FAQ019",
+    "question": "Can I contest a wrongful traffic challan?",
+    "answer": "Yes. If you believe a challan was wrongly issued: 1. Gather evidence: Photos, CCTV footage, witness statements, dashcam footage. 2. Online complaint: Visit the state traffic police website or echallan.parivahan.gov.in and file a complaint. 3. Court appeal: Appear on the court date mentioned in the challan and present your case. You have the right to contest any challan in a court of law. The magistrate will review the evidence and decide. If the court finds the challan was wrongfully issued, it will be dismissed and no fine collected.",
+    "category": "Legal Process",
+    "tags": ["contest challan", "wrong challan", "wrongful fine", "appeal challan", "dispute traffic fine"]
+  },
+  {
+    "id": "FAQ020",
+    "question": "What happens if I don't pay a traffic challan?",
+    "answer": "If you fail to pay a traffic challan: 1. A court summons will be issued (typically after 60 days). 2. Additional penalties may accumulate. 3. Your vehicle's RC renewal or transfer may be blocked. 4. Your DL renewal may be blocked. 5. In serious cases, a warrant may be issued. 6. The challan may be upgraded to a 'court challan' with higher fines. It is always advisable to pay challans promptly or contest them legally within the given time frame.",
+    "category": "Challan Payment",
+    "tags": ["unpaid challan", "not paying fine", "challan consequences", "court summons"]
+  }
+]

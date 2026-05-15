@@ -104,19 +104,19 @@ export const ChallanCalculator = ({ onClose }: { onClose: () => void }) => {
             <Animated.View style={styles.card}>
               <View style={styles.cardHeader}>
                 <View>
-                  <Text style={styles.ownerName}>{data.owner}</Text>
-                  <Text style={styles.vehicleType}>{data.vehicle_type}</Text>
+                  <Text style={styles.ownerName}>{data.owner || 'Vehicle Info'}</Text>
+                  <Text style={styles.vehicleType}>{data.vehicle_type || data.vehicle_number}</Text>
                 </View>
                 <View style={[styles.totalBadge, isSmallScreen && { alignItems: 'flex-start', marginTop: 8 }]}>
                   <Text style={styles.totalLabel}>TOTAL FINE</Text>
-                  <Text style={styles.totalAmount}>₹{data.total_fine}</Text>
+                  <Text style={styles.totalAmount}>₹{data.total_fine ?? 0}</Text>
                 </View>
               </View>
 
-              {data.pending_challans.length > 0 ? (
+              {(data.pending_challans?.length ?? 0) > 0 ? (
                 <View style={styles.challanList}>
                   <Text style={styles.sectionTitle}>Pending Violations</Text>
-                  {data.pending_challans.map((c, i) => (
+                  {data.pending_challans?.map((c, i) => (
                     <View key={i} style={styles.challanItem}>
                       <View style={styles.challanInfo}>
                         <Text style={styles.violationText}>{c.violation}</Text>
@@ -134,7 +134,7 @@ export const ChallanCalculator = ({ onClose }: { onClose: () => void }) => {
               )}
               
               <View style={styles.footer}>
-                <Text style={styles.updatedText}>Last updated from RTO: {new Date(data.last_updated).toLocaleDateString()}</Text>
+                <Text style={styles.updatedText}>Last updated from RTO: {data.last_updated ? new Date(data.last_updated).toLocaleDateString() : 'Unknown'}</Text>
               </View>
             </Animated.View>
           )}

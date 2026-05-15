@@ -10,7 +10,7 @@ from typing import Optional, Dict, List
 from dotenv import load_dotenv
 
 # Load .env for GEMINI_API_KEY
-load_dotenv()
+load_dotenv(os.path.join(os.path.dirname(os.path.abspath(__file__)), '.env'))
 
 # Import Modules
 from backend.modules.agent.engine import AgentEngine
@@ -33,6 +33,15 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+@app.get("/")
+async def root():
+    return {
+        "message": "Welcome to DriveLegal API",
+        "docs": "/docs",
+        "health": "/health",
+        "status": "online"
+    }
 
 # ── Data paths ────────────────────────────────────────────────────────────────
 DATA_DIR   = os.path.join(os.path.dirname(__file__), "data")

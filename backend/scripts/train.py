@@ -28,8 +28,8 @@ def train():
             search.collection.delete(ids=ids_to_delete)
         
         # Re-add
-        ids = [doc["rule_id"] for doc in search.documents]
-        metadatas = [{"section": doc["section"], "title": doc["title"]} for doc in search.documents]
+        ids = [f"{doc.get('rule_id', 'rule')}_{i}" for i, doc in enumerate(search.documents)]
+        metadatas = [{"section": doc.get("section", ""), "title": doc.get("title", "")} for doc in search.documents]
         documents = [doc["description"] for doc in search.documents]
         
         search.collection.add(

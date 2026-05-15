@@ -50,6 +50,11 @@ const mapLibreStub = path.resolve(
   'stubs/MapLibreGL.js'
 );
 
+const reactNativeMapsStub = path.resolve(
+  __dirname,
+  'stubs/ReactNativeMaps.js'
+);
+
 config.resolver.resolveRequest = (context, moduleName, platform) => {
   if (platform === 'web') {
     // Redirect the PermissionsAndroid path that react-native-web is missing.
@@ -68,6 +73,16 @@ config.resolver.resolveRequest = (context, moduleName, platform) => {
     // Redirect MapLibre itself on web
     if (moduleName === '@maplibre/maplibre-react-native') {
       return { filePath: mapLibreStub, type: 'sourceFile' };
+    }
+
+    // Redirect react-native-maps on web (native-only, crashes Metro)
+    if (moduleName === 'react-native-maps' || moduleName.startsWith('react-native-maps/')) {
+      return { filePath: reactNativeMapsStub, type: 'sourceFile' };
+    }
+
+    // Block react-native internal imports that react-native-web doesn't support
+    if (moduleName.includes('react-native/Libraries/Utilities/codegenNativeCommands')) {
+      return { filePath: permissionsStub, type: 'sourceFile' };
     }
   }
 

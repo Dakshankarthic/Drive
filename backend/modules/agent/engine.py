@@ -78,6 +78,17 @@ class AgentEngine:
         self.tool_executor = ToolExecutor(fine_lookup, rules_loader, geofencing_engine)
         self.client = None
         self.gemini_available = False
+        self.hybrid_search = None
+
+        # ── Local NLP (HybridSearch) for offline fallback ──────────────────
+        try:
+            from backend.modules.nlp.hybrid_search import HybridSearch
+            rules_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "data", "rules.json")
+            persist_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "data", "vector_db")
+            self.hybrid_search = HybridSearch(rules_path, persist_dir)
+            logger.info("[Agent] Local NLP (HybridSearch) loaded with %d documents.", len(self.hybrid_search.documents))
+        except Exception as e:
+            logger.warning("[Agent] HybridSearch unavailable (%s). Keyword-only fallback.", e)
 
         api_key = os.getenv("GEMINI_API_KEY")
         if not api_key:
@@ -228,12 +239,7 @@ class AgentEngine:
             logger.error(f"[Agent] Gemini error: {error_msg}")
             
             if "429" in error_msg or "RESOURCE_EXHAUSTED" in error_msg:
-                return {
-                    "status": "rate_limit",
-                    "response": "⚠️ AI Rate Limit Reached! You have asked too many questions too quickly. Please wait 30 seconds and try again.",
-                    "tools_used": [],
-                    "agent_powered": False,
-                }
+                logger.info("[Agent] Gemini rate-limited. Falling back to local NLP.")
                 
             fallback = self._keyword_fallback(user_text, gps)
             fallback["error_detail"] = error_msg
@@ -263,7 +269,7 @@ class AgentEngine:
         tools_used = []
         response_parts = []
 
-        fine_keywords = ["fine", "penalty", "challan", "amount", "how much"]
+        fine_keywords = ["fine", "penalty", "challan", "amount", "how much", "cost"]
         if any(k in text_lower for k in fine_keywords):
             offence = self._detect_offence(text_lower)
             vehicle = self._detect_vehicle(text_lower)
@@ -275,14 +281,44 @@ class AgentEngine:
                     gps,
                 )
                 tools_used.append({"tool": "lookup_fine", "result": result})
+                # Human-readable offence names
+                offence_names = {
+                    "NO_HELMET": "No Helmet", "DRUNK_DRIVING": "Drunk Driving",
+                    "SPEED_EXCESS": "Over Speeding", "NO_LICENSE": "Driving Without License",
+                    "MOBILE_PHONE": "Using Mobile Phone While Driving",
+                    "NO_INSURANCE": "No Insurance", "SECTION_177": "Jumping Red Light",
+                    "SECTION_179": "Wrong Way Driving", "SECTION_184": "Dangerous/Rash Driving",
+                    "SECTION_194D": "No Seatbelt",
+                }
+                display_name = offence_names.get(offence, offence)
+                
                 if result.get("found"):
                     response_parts.append(
-                        f"Fine for {offence} ({vehicle}) in {state}: ₹{result['amount_inr']}"
+                        f"💰 **Fine for {display_name} ({vehicle}):**\n"
+                        f"   • Amount: ₹{result['amount_inr']}\n"
+                        f"   • Repeat Offence: ₹{result.get('repeat_amount_inr', 'N/A')}\n"
+                        f"   • Section: {result.get('section_ref', 'N/A')}\n"
+                        f"   • State: {result.get('state', state)}"
                     )
-                    if result.get("section_ref"):
-                        response_parts.append(f"Section: {result['section_ref']}")
                 else:
-                    response_parts.append(f"No fine data found for '{offence}' in {state}.")
+                    # Second attempt: try without state restriction if state was 'ALL'
+                    if state == "ALL":
+                        all_state_result = self.tool_executor.execute(
+                            "lookup_fine",
+                            {"offence_type": offence, "vehicle_class": vehicle, "state": "ANY"},
+                            gps,
+                        )
+                        if all_state_result.get("found"):
+                            response_parts.append(
+                                f"💰 **Fine for {display_name} ({vehicle}) in {all_state_result.get('state', 'India')}:**\n"
+                                f"   • Amount: ₹{all_state_result['amount_inr']}\n"
+                                f"   • Section: {all_state_result.get('section_ref', 'N/A')}\n"
+                                f"   \n*(Note: This is the rule for {all_state_result.get('state')})*"
+                            )
+                        else:
+                            response_parts.append(f"No fine data found for '{display_name}' in the database.")
+                    else:
+                        response_parts.append(f"No fine data found for '{display_name}' in {state}.")
 
         rule_keywords = ["rule", "law", "legal", "section", "act", "allowed", "permitted"]
         if any(k in text_lower for k in rule_keywords):
@@ -302,10 +338,55 @@ class AgentEngine:
                 z = result["zones"][0]
                 response_parts.append(f"Active zone: {z['name']} — {', '.join(z.get('rules', []))}")
 
+        # ── Handle greetings ──────────────────────────────────────────────
+        greetings = ["hi", "hello", "hey", "good morning", "good evening", "good afternoon", "namaste"]
+        if text_lower.strip() in greetings:
+            response_parts.append(
+                "Hello! 👋 I'm DriveLegal AI — your Indian traffic law assistant.\n\n"
+                "You can ask me things like:\n"
+                "• \"What's the fine for no helmet?\"\n"
+                "• \"Drunk driving penalty in Tamil Nadu\"\n"
+                "• \"What are the rules for using high beam?\"\n"
+                "• \"Speed limit in school zone\"\n\n"
+                "How can I help you today?"
+            )
+
+        # ── Local NLP fallback: use HybridSearch for any unmatched query ──
+        if not response_parts and self.hybrid_search:
+            try:
+                nlp_results = self.hybrid_search.search(text, top_k=3)
+                # Filter out low-relevance results
+                relevant = [r for r in nlp_results if r.get("score", 0) > 0.15]
+                if relevant:
+                    tools_used.append({"tool": "hybrid_search", "result": relevant})
+                    response_parts.append("Here's what I found in the traffic law database:\n")
+                    for i, r in enumerate(relevant, 1):
+                        meta = r.get("metadata", {})
+                        title = meta.get("title", "")
+                        section = meta.get("section", "")
+                        content = r.get("content", "")
+
+                        # Clean up raw QA dataset formatting
+                        if "###Assistant:" in content:
+                            content = content.split("###Assistant:")[-1].strip()
+                        if "###Human:" in content:
+                            content = content.split("###Human:")[0].strip()
+                        # Remove trailing answer-choice numbers
+                        content = content.strip().rstrip("0123456789").strip()
+                        if not content:
+                            continue
+
+                        header = f"**{title}**" if title else f"Result {i}"
+                        if section and section != "QA Dataset":
+                            header += f" (Section {section})"
+                        response_parts.append(f"{i}. {header}\n   {content[:400]}")
+            except Exception as e:
+                logger.warning("[Agent] HybridSearch fallback error: %s", e)
+
         if not response_parts:
             response_parts = [
                 "I couldn't find specific information. "
-                "Try: 'fine for no helmet in Tamil Nadu' or add GEMINI_API_KEY for full AI."
+                "Try asking about a specific traffic rule, fine, or violation — e.g. 'fine for no helmet in Tamil Nadu'."
             ]
 
         response_parts.append("\n⚠️ This is informational only. Consult official sources.")
@@ -323,15 +404,16 @@ class AgentEngine:
 
     def _detect_offence(self, text: str) -> Optional[str]:
         offences = {
-            "no helmet": ["helmet"],
-            "drunk driving": ["drunk", "alcohol", "daaru", "dui", "drink"],
-            "speeding": ["speed", "over speed", "fast"],
-            "jumping red light": ["red light", "signal jump"],
-            "no license": ["license", "licence"],
-            "no seatbelt": ["seatbelt", "seat belt"],
-            "mobile phone use": ["mobile", "phone", "call while driving"],
-            "wrong way": ["wrong way", "one way"],
-            "dangerous driving": ["dangerous", "rash"],
+            "NO_HELMET": ["helmet"],
+            "DRUNK_DRIVING": ["drunk", "alcohol", "daaru", "dui", "drink"],
+            "SPEED_EXCESS": ["speed", "over speed", "fast", "speeding"],
+            "SECTION_177": ["red light", "signal jump", "jumping red"],
+            "NO_LICENSE": ["license", "licence", "dl"],
+            "SECTION_194D": ["seatbelt", "seat belt"],
+            "MOBILE_PHONE": ["mobile", "phone", "call while driving"],
+            "SECTION_179": ["wrong way", "one way"],
+            "SECTION_184": ["dangerous", "rash"],
+            "NO_INSURANCE": ["insurance"],
         }
         for offence, keywords in offences.items():
             if any(k in text for k in keywords):
@@ -340,7 +422,7 @@ class AgentEngine:
 
     def _detect_vehicle(self, text: str) -> str:
         if any(k in text for k in ["bike", "scooter", "motorcycle", "two wheeler", "2w"]):
-            return "2W"
+            return "TWO_WHEELER"
         if any(k in text for k in ["truck", "bus", "heavy", "lorry", "hgv"]):
             return "HGV"
         if any(k in text for k in ["auto", "rickshaw", "three wheeler", "3w"]):

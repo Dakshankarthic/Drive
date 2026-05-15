@@ -11,21 +11,32 @@ class FineLookup:
     def query(self, offence_code: str, vehicle_class: str, state: str, repeat: bool = False) -> dict | None:
         """
         Query the fine database for a specific offence and vehicle class in a state.
-        Returns: {amount_inr, repeat_amount_inr, section_ref, source_url, fetched_at} or None
+        Returns: {amount_inr, repeat_amount_inr, section_ref, source_url, fetched_at, state} or None
         """
         conn = sqlite3.connect(self.db_path)
         conn.row_factory = sqlite3.Row
         cursor = conn.cursor()
         
-        # Try exact match for state, or "ALL" if state-specific not found
-        query = """
-            SELECT amount_inr, repeat_amount_inr, section_ref, source_url, fetched_at 
-            FROM fines 
-            WHERE offence_code = ? AND (vehicle_class = ? OR ? = 'GENERAL' OR vehicle_class = 'ALL') AND (state = ? OR state = 'ALL')
-            ORDER BY CASE WHEN state = ? THEN 0 ELSE 1 END
-            LIMIT 1
-        """
-        cursor.execute(query, (offence_code, vehicle_class, vehicle_class, state, state))
+        # Build query based on state flexibility
+        if state == "ANY":
+            query = """
+                SELECT amount_inr, repeat_amount_inr, section_ref, source_url, fetched_at, state 
+                FROM fines 
+                WHERE offence_code = ? AND (vehicle_class = ? OR ? = 'GENERAL' OR vehicle_class = 'ALL')
+                LIMIT 1
+            """
+            cursor.execute(query, (offence_code, vehicle_class, vehicle_class))
+        else:
+            # Try exact match for state, or "ALL" if state-specific not found
+            query = """
+                SELECT amount_inr, repeat_amount_inr, section_ref, source_url, fetched_at, state 
+                FROM fines 
+                WHERE offence_code = ? AND (vehicle_class = ? OR ? = 'GENERAL' OR vehicle_class = 'ALL') AND (state = ? OR state = 'ALL')
+                ORDER BY CASE WHEN state = ? THEN 0 ELSE 1 END
+                LIMIT 1
+            """
+            cursor.execute(query, (offence_code, vehicle_class, vehicle_class, state, state))
+            
         row = cursor.fetchone()
         conn.close()
 

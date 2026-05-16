@@ -11,6 +11,12 @@ Each tool wraps an existing backend module:
 from typing import Any, Dict, List, Optional
 import logging
 
+from backend.modules.agent.normalize import (
+    normalize_offence_code,
+    normalize_state,
+    normalize_vehicle_class,
+)
+
 logger = logging.getLogger(__name__)
 
 
@@ -183,13 +189,14 @@ class ToolExecutor:
         if not self.fine_lookup:
             return {"error": "Fine database not available"}
 
-        # Clean the AI's input to perfectly match our UPPER_SNAKE_CASE database format
-        clean_offence_code = params.get("offence_type", "").upper().replace(" ", "_")
-        
+        clean_offence_code = normalize_offence_code(params.get("offence_type", ""))
+        vehicle_class = normalize_vehicle_class(params.get("vehicle_class", "GENERAL"))
+        state = normalize_state(params.get("state", "ALL"))
+
         result = self.fine_lookup.query(
             offence_code=clean_offence_code,
-            vehicle_class=params.get("vehicle_class", "GENERAL"),
-            state=params.get("state", "ALL"),
+            vehicle_class=vehicle_class,
+            state=state,
             repeat=params.get("is_repeat", False),
         )
 
@@ -221,8 +228,8 @@ class ToolExecutor:
         if not self.rules_loader:
             return {"error": "Rules database not available"}
 
-        offence_input = params.get("offence_type", "")
-        state = params.get("state", "ALL")
+        offence_input = normalize_offence_code(params.get("offence_type", ""))
+        state = normalize_state(params.get("state", "ALL"))
 
         # Try exact offence code first (e.g., "NO_HELMET")
         result = self.rules_loader.get_by_offence_code(offence_input.upper(), state)

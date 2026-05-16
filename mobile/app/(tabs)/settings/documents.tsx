@@ -10,9 +10,11 @@ import {
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
+import { useSettings } from '../../../hooks/useSettings';
 
 export default function DocumentVaultScreen() {
   const router = useRouter();
+  const { profile } = useSettings();
 
   return (
     <SafeAreaView style={styles.safeArea}>
@@ -52,7 +54,7 @@ export default function DocumentVaultScreen() {
             <View style={styles.licenseBottomRow}>
               <View>
                 <Text style={styles.licenseFieldLabel}>HOLDER</Text>
-                <Text style={styles.licenseFieldValue}>Arjun Krishnan</Text>
+                <Text style={styles.licenseFieldValue}>{profile.name === 'Driver' ? 'Your name' : profile.name}</Text>
               </View>
               <View>
                 <Text style={styles.licenseFieldLabel}>VALID TILL</Text>

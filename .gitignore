@@ -39,3 +39,8 @@ Thumbs.db
 
 # Misc
 .sixth/
+
+# Virtual Environments
+venv/
+backend/venv/
+

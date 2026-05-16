@@ -14,7 +14,9 @@ import {
   Alert
 } from 'react-native';
 import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
-import { useQuery } from '../../hooks/useQuery';
+import { useQuery, ChatHistoryTurn } from '../../hooks/useQuery';
+import { buildCitationLabel } from '../../lib/citations';
+import { buildWelcomeText, WELCOME_SUGGESTIONS } from '../../lib/welcome';
 import { StatusBar } from 'expo-status-bar';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { useHistory } from '../../hooks/useHistory';
@@ -26,8 +28,15 @@ import * as Location from 'expo-location';
 export default function DriveLegalAssistant() {
   const { q, sid, new: isNew } = useLocalSearchParams<{ q: string, sid: string, new: string }>();
   const { addSession, sessions } = useHistory();
-  const { t } = useSettings();
+  const { t, profile, initialized } = useSettings();
   const router = useRouter();
+
+  const makeWelcomeMessage = (): ChatMessage => ({
+    id: '1',
+    sender: 'ai',
+    text: buildWelcomeText(profile.name),
+    suggestions: [...WELCOME_SUGGESTIONS],
+  });
 
   const [queryText, setQueryText] = useState('');
   const [isListening, setIsListening] = useState(false);
@@ -37,7 +46,7 @@ export default function DriveLegalAssistant() {
   
   const scrollRef = useRef<ScrollView>(null);
   const lastQueryRef = useRef<string>('');
-  
+
   interface ChatMessage {
     id: string;
     sender: 'user' | 'ai';
@@ -46,19 +55,32 @@ export default function DriveLegalAssistant() {
     source?: string;
   }
 
-  const initialMessage: ChatMessage = {
-    id: '1',
-    sender: 'ai',
-    text: "Hi Arjun 👋 I'm your DriveLegal assistant. Ask anything about traffic rules, fines, or paperwork — in plain language.",
-    suggestions: [
-      "What's the fine?",
-      "Are there any exceptions?",
-      "Where is it allowed?"
-    ]
-  };
-
-  const [chatHistory, setChatHistory] = useState<ChatMessage[]>([initialMessage]);
+  const [chatHistory, setChatHistory] = useState<ChatMessage[]>(() => [
+    {
+      id: '1',
+      sender: 'ai',
+      text: buildWelcomeText('Driver'),
+      suggestions: [...WELCOME_SUGGESTIONS],
+    },
+  ]);
+  const chatHistoryRef = useRef<ChatMessage[]>(chatHistory);
   const { data, isLoading, error, submitQuery } = useQuery();
+
+  useEffect(() => {
+    chatHistoryRef.current = chatHistory;
+  }, [chatHistory]);
+
+  useEffect(() => {
+    if (!initialized) return;
+    setChatHistory((prev) => {
+      if (prev.length === 1 && prev[0].id === '1') {
+        const welcome = makeWelcomeMessage();
+        chatHistoryRef.current = [welcome];
+        return [welcome];
+      }
+      return prev;
+    });
+  }, [initialized, profile.name]);
 
   useEffect(() => {
     (async () => {
@@ -81,7 +103,9 @@ export default function DriveLegalAssistant() {
 
   useEffect(() => {
     if (isNew === 'true') {
-      setChatHistory([initialMessage]);
+      const welcome = makeWelcomeMessage();
+      setChatHistory([welcome]);
+      chatHistoryRef.current = [welcome];
       router.setParams({ new: '' });
       return;
     }
@@ -89,8 +113,9 @@ export default function DriveLegalAssistant() {
     if (sid) {
       const session = sessions.find(s => s.id === sid);
       if (session) {
+        const welcome = makeWelcomeMessage();
         setChatHistory([
-          initialMessage,
+          welcome,
           { id: 'u' + session.id, sender: 'user', text: session.query },
           { id: 'a' + session.id, sender: 'ai', text: session.response }
         ]);
@@ -113,21 +138,35 @@ export default function DriveLegalAssistant() {
       text: text,
     };
     
-    setChatHistory(prev => [...prev, userMessage]);
+    // Use ref so we always send the latest turns (avoids stale React state)
+    const historyForApi: ChatHistoryTurn[] = chatHistoryRef.current
+      .filter((m) => m.id !== '1')
+      .slice(-20)
+      .map((m) => ({
+        role: m.sender === 'user' ? ('user' as const) : ('model' as const),
+        parts: [m.text],
+      }));
+
+    setChatHistory((prev) => [...prev, userMessage]);
     setQueryText('');
-    
+
     setTimeout(() => scrollRef.current?.scrollToEnd({ animated: true }), 100);
-    await submitQuery(text);
+    await submitQuery(text, historyForApi);
   };
 
   useEffect(() => {
     if (data) {
       const respText = data.response || data.text || "I found some information regarding your query.";
+      const citation =
+        (data.citations && data.citations.length > 0
+          ? data.citations.join(' · ')
+          : buildCitationLabel(data, currentLocation)) || undefined;
+
       const aiResponse: ChatMessage = {
         id: (Date.now() + 1).toString(),
         sender: 'ai',
         text: respText,
-        source: currentLocation ? `${currentLocation} · Motor Vehicles Act` : "Motor Vehicles Act 1988"
+        source: citation,
       };
 
       if (lastQueryRef.current) {
@@ -210,6 +249,13 @@ export default function DriveLegalAssistant() {
         style={styles.container}
         keyboardVerticalOffset={Platform.OS === 'ios' ? 0 : 0}
       >
+        <View style={styles.trustBanner}>
+          <Ionicons name="shield-checkmark-outline" size={16} color="#92400e" />
+          <Text style={styles.trustBannerText}>
+            Local AI + verified fine DB · Not government · Not legal advice
+          </Text>
+        </View>
+
         {/* Header */}
         <View style={styles.header}>
           <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
@@ -273,10 +319,8 @@ export default function DriveLegalAssistant() {
                   </Text>
                 </View>
                 
-                {msg.sender === 'ai' && msg.source && (
-                  <Text style={styles.sourceFooter}>
-                    {msg.source} - 1989 (amended 2024)
-                  </Text>
+                {msg.sender === 'ai' && msg.source && msg.id !== '1' && (
+                  <Text style={styles.sourceFooter}>{msg.source}</Text>
                 )}
                 
                 {msg.sender === 'ai' && index === chatHistory.length - 1 && msg.suggestions && (
@@ -388,6 +432,22 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
+  },
+  trustBanner: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+    paddingHorizontal: 14,
+    paddingVertical: 8,
+    backgroundColor: '#fffbeb',
+    borderBottomWidth: 1,
+    borderBottomColor: '#fde68a',
+  },
+  trustBannerText: {
+    flex: 1,
+    fontSize: 11,
+    color: '#92400e',
+    fontWeight: '500',
   },
   header: {
     flexDirection: 'row',

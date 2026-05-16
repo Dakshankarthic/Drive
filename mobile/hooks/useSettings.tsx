@@ -86,7 +86,7 @@ const SettingsContext = createContext<SettingsContextType | undefined>(undefined
 
 export function SettingsProvider({ children }: { children: React.ReactNode }) {
   const [language, setLanguageState] = useState<Language>('en');
-  const [profile, setProfileState] = useState<UserProfile>({ name: 'Arjun Krishnan', avatar: 'A', drivingSince: '2021' });
+  const [profile, setProfileState] = useState<UserProfile>({ name: 'Driver', avatar: 'D', drivingSince: '2021' });
   const [notificationsEnabled, setNotificationsEnabledState] = useState(true);
   const [selectedVehicleId, setSelectedVehicleIdState] = useState<string | null>(null);
   const [initialized, setInitialized] = useState(false);

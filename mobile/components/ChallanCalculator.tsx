@@ -12,6 +12,7 @@ import {
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
+import { getApiBaseUrl } from '../lib/api';
 
 
 
@@ -46,9 +47,12 @@ export const ChallanCalculator = ({ onClose }: { onClose: () => void }) => {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch('http://127.0.0.1:8000/challan/calculate', {
+      const response = await fetch(`${getApiBaseUrl()}/challan/calculate`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 
+          'Content-Type': 'application/json',
+          'Bypass-Tunnel-Reminder': 'true'
+        },
         body: JSON.stringify({ vehicle_number: vehicleNumber }),
       });
       const result = await response.json();
@@ -72,6 +76,13 @@ export const ChallanCalculator = ({ onClose }: { onClose: () => void }) => {
           <TouchableOpacity onPress={onClose} style={styles.closeButton}>
             <Ionicons name="close" size={24} color="#94a3b8" />
           </TouchableOpacity>
+        </View>
+
+        <View style={styles.demoBanner}>
+          <Ionicons name="flask-outline" size={18} color="#fbbf24" />
+          <Text style={styles.demoBannerText}>
+            Demo only — sample challans, not real Parivahan / eChallan data.
+          </Text>
         </View>
 
         <View style={styles.inputSection}>
@@ -102,6 +113,11 @@ export const ChallanCalculator = ({ onClose }: { onClose: () => void }) => {
         <ScrollView style={styles.resultsArea} showsVerticalScrollIndicator={false}>
           {data && (
             <Animated.View style={styles.card}>
+              {(data as { demo?: boolean }).demo && (
+                <View style={styles.demoCardTag}>
+                  <Text style={styles.demoCardTagText}>DEMO DATA</Text>
+                </View>
+              )}
               <View style={styles.cardHeader}>
                 <View>
                   <Text style={styles.ownerName}>{data.owner || 'Vehicle Info'}</Text>
@@ -134,7 +150,11 @@ export const ChallanCalculator = ({ onClose }: { onClose: () => void }) => {
               )}
               
               <View style={styles.footer}>
-                <Text style={styles.updatedText}>Last updated from RTO: {data.last_updated ? new Date(data.last_updated).toLocaleDateString() : 'Unknown'}</Text>
+                <Text style={styles.updatedText}>
+                  {(data as { demo?: boolean }).demo
+                    ? 'Demo sample — not from RTO / Parivahan'
+                    : `Last updated: ${data.last_updated ? new Date(data.last_updated).toLocaleDateString() : 'Unknown'}`}
+                </Text>
               </View>
             </Animated.View>
           )}
@@ -184,6 +204,37 @@ const styles = StyleSheet.create({
   },
   closeButton: {
     padding: 4,
+  },
+  demoBanner: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 10,
+    backgroundColor: 'rgba(251, 191, 36, 0.15)',
+    borderWidth: 1,
+    borderColor: 'rgba(251, 191, 36, 0.4)',
+    borderRadius: 10,
+    padding: 12,
+    marginBottom: 16,
+  },
+  demoBannerText: {
+    flex: 1,
+    color: '#fde68a',
+    fontSize: 12,
+    lineHeight: 17,
+  },
+  demoCardTag: {
+    alignSelf: 'flex-start',
+    backgroundColor: '#f59e0b',
+    paddingHorizontal: 8,
+    paddingVertical: 4,
+    borderRadius: 6,
+    marginBottom: 12,
+  },
+  demoCardTagText: {
+    color: '#1e293b',
+    fontSize: 10,
+    fontWeight: '800',
+    letterSpacing: 1,
   },
   inputSection: {
     marginBottom: 24,

@@ -4,5 +4,6 @@ spacy
 shapely
 playwright
 google-genai
+openai
 python-dotenv
 pydantic

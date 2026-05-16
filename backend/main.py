@@ -4,10 +4,12 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from fastapi import FastAPI, Body
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import JSONResponse
 from datetime import datetime
 from pydantic import BaseModel, Field
 from typing import Optional, Dict, List
 from dotenv import load_dotenv
+import json
 
 # Load .env for GEMINI_API_KEY
 load_dotenv(os.path.join(os.path.dirname(os.path.abspath(__file__)), '.env'))
@@ -19,10 +21,18 @@ from backend.modules.rules.loader import RulesLoader
 from backend.modules.geofencing.engine import GeofencingEngine
 from backend.modules.sync.router import router as sync_router
 
+class UTF8JSONResponse(JSONResponse):
+    """Preserve ₹ and other Unicode in JSON responses."""
+
+    def render(self, content) -> bytes:
+        return json.dumps(content, ensure_ascii=False).encode("utf-8")
+
+
 app = FastAPI(
     title="DriveLegal API",
     description="AI-powered Indian traffic law assistant with agentic tool calling.",
     version="2.0.0",
+    default_response_class=UTF8JSONResponse,
 )
 
 # ── CORS (required for web/browser clients) ───────────────────────────────────
@@ -91,7 +101,26 @@ async def handle_query(request: QueryRequest = Body(...)):
         conversation_history=request.history,
         gps=request.gps,
     )
+    result["citations"] = _citations_from_tools(result.get("tools_used") or [])
     return result
+
+
+def _citations_from_tools(tools_used: list) -> list:
+    """Human-readable source lines for the mobile trust footer."""
+    lines = []
+    for entry in tools_used:
+        tool = entry.get("tool")
+        res = entry.get("result") or {}
+        if tool == "lookup_fine" and res.get("found"):
+            section = res.get("section_ref") or "MV Act"
+            amt = res.get("amount_inr")
+            when = res.get("data_as_of") or res.get("fetched_at") or ""
+            lines.append(f"{section}: ₹{amt} (local fines.db{f', updated {when[:10]}' if when else ''})")
+        elif tool == "lookup_rule" and res.get("found"):
+            lines.append(f"{res.get('section') or res.get('rule_id')}: rules.json")
+    if not lines and tools_used:
+        lines.append("AI synthesis — confirm on official portals")
+    return lines
 
 
 @app.post("/challan/calculate")
@@ -102,8 +131,15 @@ async def calculate_challan(request: ChallanRequest = Body(...)):
     """
     v_num = request.vehicle_number.upper().replace(" ", "").replace("-", "")
 
+    demo_notice = (
+        "Demo sample data only — not linked to Parivahan / eChallan. "
+        "Do not use for real payment decisions."
+    )
+
     if "TN" in v_num:
         return {
+            "demo": True,
+            "demo_notice": demo_notice,
             "vehicle_number": request.vehicle_number,
             "owner": "J*** S***",
             "vehicle_type": "Motor Car (LMV)",
@@ -116,6 +152,8 @@ async def calculate_challan(request: ChallanRequest = Body(...)):
         }
     elif "DL" in v_num:
         return {
+            "demo": True,
+            "demo_notice": demo_notice,
             "vehicle_number": request.vehicle_number,
             "owner": "A*** K***",
             "vehicle_type": "Two Wheeler",
@@ -127,6 +165,8 @@ async def calculate_challan(request: ChallanRequest = Body(...)):
         }
     else:
         return {
+            "demo": True,
+            "demo_notice": demo_notice,
             "vehicle_number": request.vehicle_number,
             "owner": "N/A",
             "vehicle_type": "Unknown",
@@ -142,11 +182,17 @@ async def get_health():
     """Server and database status."""
     db_age       = fine_lookup.get_db_age() if fine_lookup else "DB not found"
     rules_count  = len(rules_loader.rules)  if rules_loader else 0
+    agent_mode = "keyword-fallback"
+    if agent.ollama_available:
+        agent_mode = f"ollama/{agent.ollama_model}"
+    elif agent.gemini_available:
+        agent_mode = "gemini-2.0-flash"
     return {
         "status":        "ok",
-        "agent_mode":    "gemini-2.0-flash-latest" if agent.gemini_available else "keyword-fallback",
+        "agent_mode":    agent_mode,
         "db_age":        db_age,
         "rules_count":   rules_count,
+        "chat_handler":  "v3-memory",
     }
 
 
